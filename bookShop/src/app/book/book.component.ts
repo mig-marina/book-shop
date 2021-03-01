@@ -27,6 +27,7 @@ export class BookComponent implements OnInit {
         createDate: 2019,
         isAvailable: true,
       }
+    count:number = 0;
 
   constructor() { }
 
@@ -34,7 +35,9 @@ export class BookComponent implements OnInit {
   }
 
   onBuy() {
-    console.log('click');
+    const comment = document.querySelector('.comment-buy');
+    comment.textContent = 'item in cart';
+    this.count = 1;
   }
 
 }

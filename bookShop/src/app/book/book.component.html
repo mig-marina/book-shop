@@ -7,7 +7,8 @@
     <p><span class="bold">Data:</span> {{post.createDate}}</p>
     <p><span class="bold">Is Available:</span> {{post.isAvailable}}</p>
     <div class="wrap-button-buy">
-      <button class="button-buy" *ngIf="post.isAvailable" (click) = "onBuy()">buy</button>
+      <button class="button-buy" *ngIf="post.isAvailable && !this.count" (click) = "onBuy()">buy</button>
     </div>
+    <p class="comment-buy"></p>
   </div>
 </div>

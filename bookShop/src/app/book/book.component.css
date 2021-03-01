@@ -56,3 +56,9 @@ h1 {
 .button-buy:focus {
     outline: none;
 }
+
+.comment-buy {
+  text-align: right;
+  color: #064B73;
+  text-transform: uppercase;
+}
