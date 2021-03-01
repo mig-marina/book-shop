@@ -10,5 +10,6 @@
       <button class="button-buy" *ngIf="post.isAvailable && !this.count" (click) = "onBuy()">buy</button>
     </div>
     <p class="comment-buy"></p>
+    <p class="comment-is-available" *ngIf="!post.isAvailable">the product is not available for order</p>
   </div>
 </div>

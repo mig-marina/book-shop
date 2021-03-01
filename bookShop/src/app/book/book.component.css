@@ -57,7 +57,8 @@ h1 {
     outline: none;
 }
 
-.comment-buy {
+.comment-buy,
+.comment-is-available {
   text-align: right;
   color: #064B73;
   text-transform: uppercase;
