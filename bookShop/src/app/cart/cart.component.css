@@ -1,0 +1,78 @@
+.cart-content {
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #0B0B5D;
+  border-radius: 20px;
+  user-select: none;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+}
+
+.wrap-cart-content {
+  padding: 50px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.description {
+  padding: 20px 0;
+  border-top: 1px solid #DDD;
+}
+
+.description:before {
+  content: '**';
+  padding-right: 10px;
+  color: darkred;
+}
+
+.wrap-button-complete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-complete {
+  padding: 10px;
+  border: none;
+  border: 1px solid #064B73;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #064B73;
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.button-complete:hover {
+    color: #FFF;
+    background-color: #064B73;
+}
+
+.button-complete:focus {
+    outline: none;
+}
+
+.cart-item-header {
+  padding: 20px 0;
+  display: flex;
+}
+
+.cart-item-title {
+  width: 55%;
+  color: #064B73;
+}
+
+.cart-item-count,
+.cart-item-price,
+.cart-item-settings {
+  width: 15%;
+  color: #064B73;
+}
+
+.result {
+  padding: 20px 0;
+  border-top: 1px solid #DDD;
+  text-transform: uppercase;
+}
