@@ -27,10 +27,14 @@ export class BookComponent implements OnInit {
         createDate: 2019,
         isAvailable: true,
       }
-      
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onBuy() {
+    console.log('click');
   }
 
 }

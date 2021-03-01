@@ -1,1 +1,13 @@
-<p>book works!</p>
+<div class="book-content">
+  <div class="wrap-book-content">
+    <h1>{{post.name}}</h1>
+    <h2>Category: {{post.category}}</h2>
+    <p class="description">{{post.description}}</p>
+    <p><span class="bold">Price:</span> {{post.price}}</p>
+    <p><span class="bold">Data:</span> {{post.createDate}}</p>
+    <p><span class="bold">Is Available:</span> {{post.isAvailable}}</p>
+    <div class="wrap-button-buy">
+      <button class="button-buy" *ngIf="post.isAvailable" (click) = "onBuy()">buy</button>
+    </div>
+  </div>
+</div>
