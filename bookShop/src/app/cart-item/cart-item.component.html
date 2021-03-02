@@ -1,10 +1,10 @@
-      <div class="cart-item-content" *ngFor="let itemBook of listBooks">
+      <div class="cart-item-content">
         <div class="cart-item-title">{{itemBook.name}}</div>
         <div class="cart-item-count">{{itemBook.count}}</div>
         <div class="cart-item-price">{{itemBook.price}}</div>
         <div class="cart-item-settings">
           <button class="button-settings" (click)="addOne(itemBook)">+ 1</button>
           <button class="button-settings" (click)="minusOne(itemBook)">- 1</button>
-          <button class="button-settings" (click)="deleteItem(itemBook)">delete</button>
+          <!-- <button class="button-settings" (click)="deleteItem(itemBook)">delete</button> -->
         </div>
       </div>

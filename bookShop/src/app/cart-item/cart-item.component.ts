@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-
-import { IBook } from './../ibook';
+import { Component, OnInit, Input, Output } from '@angular/core';
+// import { Component, Input } from '@angular/core';
+// import { IBook } from './../ibook';
+import { IListBooks } from './../ilist-books';
 
 
 @Component({
@@ -10,29 +11,33 @@ import { IBook } from './../ibook';
 })
 
 export class CartItemComponent implements OnInit {
-
-  listBooks = [
-    {
-      name: 'The ABC Murders',
-      count: 1,
-      price: 23,
-     },
-     {
-       name: 'The other book',
-       count: 1,
-       price: 41,
-     },
-     {
-       name: 'The new book',
-       count: 1,
-       price: 11,
-     },
-     {
-       name: 'The super new book',
-       count: 1,
-       price: 73,
-     }
-  ];
+// export class CartItemComponent {
+@Input() public itemBook:IListBooks;
+// @Output() addOne;
+// @Output() minusOne;
+// @Output() deleteItem;
+  // listBooks = [
+  //   {
+  //     name: 'The ABC Murders',
+  //     count: 1,
+  //     price: 23,
+  //    },
+  //    {
+  //      name: 'The other book',
+  //      count: 1,
+  //      price: 41,
+  //    },
+  //    {
+  //      name: 'The new book',
+  //      count: 1,
+  //      price: 11,
+  //    },
+  //    {
+  //      name: 'The super new book',
+  //      count: 1,
+  //      price: 73,
+  //    }
+  // ];
 
   count = 1;
 
@@ -52,9 +57,9 @@ export class CartItemComponent implements OnInit {
     }
   }
 
-  deleteItem(itemBook) {
-    const index = this.listBooks.indexOf(itemBook);
-    this.listBooks.splice(index, 1);
-  }
+  // deleteItem(itemBook) {
+  //   const index = this.listBooks.indexOf(itemBook);
+  //   this.listBooks.splice(index, 1);
+  // }
 
 }
