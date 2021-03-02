@@ -48,7 +48,7 @@ export class CartItemComponent implements OnInit {
   }
 
   addOne(itemBook) {
-    itemBook.count = itemBook.count + 1;
+    itemBook.count = itemBook.count + 1; 
   }
 
   minusOne(itemBook) {

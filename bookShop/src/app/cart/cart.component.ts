@@ -33,11 +33,32 @@ export class CartComponent implements OnInit {
      }
   ];
 
+  summ:number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+
+
   }
+
+  ngAfterViewInit() {
+    this.getSum();
+  }
+
+  ngAfterViewChecked() {
+    this.getSum();
+  }
+
+  getSum() {
+    let res:number = 0;
+    const list = document.querySelectorAll('.cart-item-content .cart-item-price');
+    for(let i = 0; i < list.length; i++) {
+      res = res + Number(list[i].textContent);
+    }
+    this.summ = res;
+  }
+
 
   // addOne(itemBook) {
   //   itemBook.count = itemBook.count + 1;

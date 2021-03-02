@@ -86,4 +86,11 @@ h2 {
   padding: 20px 0;
   border-top: 1px solid #DDD;
   text-transform: uppercase;
+  text-align: right;
+}
+
+.result b {
+  padding-left: 20px;
+  font-weight: bold;
+  color: darkred;
 }

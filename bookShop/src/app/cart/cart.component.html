@@ -12,7 +12,7 @@
       <app-cart-item *ngFor="let itemBook of listBooks" [itemBook]="itemBook"></app-cart-item>
     </div>
 
-    <p class="result">total to pay:</p>
+    <p class="result">total to pay: <b>{{this.summ}}</b></p>
     <p class="description">Check the order sheet and click "complete order" to confirm</p>
     <div class="wrap-button-complete">
       <button class="button-complete">complete order</button>
