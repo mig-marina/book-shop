@@ -1,6 +1,11 @@
 .cart-item-content {
   display: flex;
-  padding: 20px 0;
+  padding: 20px;
+  transition: background-color .7s;
+}
+
+.cart-item-content:hover {
+  background-color: #DDD;
 }
 
 .cart-item-title {
