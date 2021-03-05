@@ -12,21 +12,25 @@ export class CartComponent implements OnInit {
 
   listBooks:IListBooks[] = [
     {
+      id: 0,
       name: 'The ABC Murders',
       count: 1,
       price: 23,
      },
      {
+       id: 1,
        name: 'The other book',
        count: 1,
        price: 41,
      },
      {
+       id: 2,
        name: 'The new book',
        count: 1,
        price: 11,
      },
      {
+       id: 3,
        name: 'The super new book',
        count: 1,
        price: 73,
@@ -34,45 +38,30 @@ export class CartComponent implements OnInit {
   ];
 
   summ:number = 0;
+  message:string = 'Your comment to the order will be displayed here';
+
+  getSum() {
+    this.summ = this.listBooks.reduce((s,item) => s + item.price * item.count, 0);
+  }
 
   constructor() { }
 
   ngOnInit(): void {
-
-
-  }
-
-  ngAfterViewInit() {
     this.getSum();
   }
 
-  ngAfterViewChecked() {
+  changeCountInList() {
     this.getSum();
   }
 
-  getSum() {
-    let res:number = 0;
-    const list = document.querySelectorAll('.cart-item-content .cart-item-price');
-    for(let i = 0; i < list.length; i++) {
-      res = res + Number(list[i].textContent);
-    }
-    this.summ = res;
+  deleteItemInList(data) {
+    this.listBooks = this.listBooks.filter((item) => item.id !== data.id);
+    this.getSum();
   }
 
-
-  // addOne(itemBook) {
-  //   itemBook.count = itemBook.count + 1;
-  // }
-  //
-  // minusOne(itemBook) {
-  //   if(itemBook.count !== 0) {
-  //     itemBook.count = itemBook.count - 1;
-  //   }
-  // }
-
-  // deleteItem(itemBook) {
-  //   const index = this.listBooks.indexOf(itemBook);
-  //   this.listBooks.splice(index, 1);
-  // }
+  updateUserMessage(event) {
+    const messageUser = event.target.value;
+    this.message = messageUser;
+  }
 
 }

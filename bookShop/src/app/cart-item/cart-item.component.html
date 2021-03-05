@@ -3,8 +3,8 @@
         <div class="cart-item-count">{{itemBook.count}}</div>
         <div class="cart-item-price">{{itemBook.price * itemBook.count}}</div>
         <div class="cart-item-settings">
-          <button class="button-settings" (click)="addOne(itemBook)">+ 1</button>
-          <button class="button-settings" (click)="minusOne(itemBook)">- 1</button>
-          <!-- <button class="button-settings" (click)="deleteItem(itemBook)">delete</button> -->
+          <button class="button-settings" (click)="changeCount(itemBook, 1)">+ 1</button>
+          <button class="button-settings" (click)="changeCount(itemBook, 2)">- 1</button>
+          <button class="button-settings" (click)="deleteItem(itemBook)">delete</button>
         </div>
       </div>
