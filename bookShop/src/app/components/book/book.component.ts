@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IBook } from './../ibook';
+import { IBook } from './../../ibook';
 
 enum Categories {
   Detective = 'Detective',

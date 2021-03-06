@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IListBooks } from './../ilist-books';
+import { IListBooks } from './../../ilist-books';
 
 
 @Component({
