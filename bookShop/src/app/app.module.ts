@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { BooksModule } from './modules/books/books.module';
 import { CartModule } from './modules/cart/cart.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BooksModule,
-    CartModule
+    CartModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
