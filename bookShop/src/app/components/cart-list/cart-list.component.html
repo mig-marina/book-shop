@@ -8,7 +8,7 @@
       <div class="cart-item-settings">Options</div>
     </div>
 
-    <div>
+    <div *ngIf="listBookForCart.length">
       <app-cart-item *ngFor="let itemBook of listBookForCart" [itemBook]="itemBook" (changeCountInList)="changeCountInList($event)" (deleteItemInList)="deleteItemInList($event)"></app-cart-item>
     </div>
 

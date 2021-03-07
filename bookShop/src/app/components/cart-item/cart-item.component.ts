@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IListBooks } from './../../ilist-books';
-
+// import { IListBooks } from './../../ilist-books';
+import { IBooksList } from '../../ibooks-list';
 
 @Component({
   selector: 'app-cart-item',
@@ -10,7 +10,8 @@ import { IListBooks } from './../../ilist-books';
 
 export class CartItemComponent implements OnInit {
 
-  @Input() public itemBook:IListBooks;
+  // @Input() public itemBook:IListBooks;
+  @Input() public itemBook:IBooksList;
   @Output() changeCountInList = new EventEmitter();
   @Output() deleteItemInList = new EventEmitter();
 
