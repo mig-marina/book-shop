@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 import { IBook } from './../../ibook';
 
@@ -20,14 +20,16 @@ enum Categories {
 export class BookComponent implements OnInit {
 
   @Input() public itemBook:IBook;
+  @Output() onBuyBook = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onBuy() {
+  onBuy(itemBook) {
     this.itemBook.isShow = false;
+    this.onBuyBook.emit(itemBook);
   }
 
 }

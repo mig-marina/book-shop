@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { IBook } from './../../ibook';
+import { IBooksList } from '../../ibooks-list';
 
 enum Categories {
   Detective = 'Detective',
@@ -13,6 +14,7 @@ enum Categories {
 }
 
 import { BooksService } from '../../services/books/books.service';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-books-list',
@@ -20,9 +22,11 @@ import { BooksService } from '../../services/books/books.service';
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent implements OnInit {
-  
+
   listBooks:IBook[] = [];
-  constructor(private booksService: BooksService) { }
+  listCart: IBooksList[] = [];
+
+  constructor(private booksService: BooksService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getBooks();
@@ -30,6 +34,10 @@ export class BooksListComponent implements OnInit {
 
   getBooks(): void {
     this.listBooks = this.booksService.getBooks();
+  }
+
+  onBuyBook(data) {
+    this.cartService.addBook(data);
   }
 
 }

@@ -9,6 +9,7 @@ enum Categories {
 }
 
 export interface IBook {
+  id: number;
   name: string;
   description: string;
   price: number;
