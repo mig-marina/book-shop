@@ -67,7 +67,7 @@ export class CartListComponent implements OnInit {
   }
 
     getSum() {
-      this.summ = this.listBooks.reduce((s,item) => s + item.price * item.count, 0);
+      this.summ = this.listBookForCart.reduce((s,item) => s + item.item.price * item.count, 0);
     }
 
   updateUserMessage(event) {
