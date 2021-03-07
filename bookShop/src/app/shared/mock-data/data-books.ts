@@ -18,6 +18,7 @@ export let books:IBook[] = [
       category: Categories.Fantasy,
       createDate: 2019,
       isAvailable: true,
+      isShow: true,
     },
     {
       name: 'The Ring of Solomon',
@@ -26,6 +27,7 @@ export let books:IBook[] = [
       category: Categories.Fantasy,
       createDate: 2017,
       isAvailable: false,
+      isShow: true,
     },
     {
       name: 'The ABC Murders',
@@ -34,6 +36,7 @@ export let books:IBook[] = [
       category: Categories.Detective,
       createDate: 2019,
       isAvailable: true,
+      isShow: true,
     },
     {
       name: 'No Ordinary Time: Franklin and Eleanor Roosevelt: The Home Front in World War II',
@@ -42,6 +45,7 @@ export let books:IBook[] = [
       category: Categories.History,
       createDate: 2017,
       isAvailable: false,
+      isShow: true,
     },
     {
       name: 'Killing Lincoln: The Shocking Assassination that Changed America Forever',
@@ -50,5 +54,6 @@ export let books:IBook[] = [
       category: Categories.History,
       createDate: 2019,
       isAvailable: true,
+      isShow: true,
     }
 ]

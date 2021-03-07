@@ -15,4 +15,5 @@ export interface IBook {
   category: Categories;
   createDate: number;
   isAvailable: boolean;
+  isShow: boolean;
 }

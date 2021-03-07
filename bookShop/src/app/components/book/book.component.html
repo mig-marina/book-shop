@@ -7,9 +7,9 @@
     <p><span class="bold">Data:</span> {{itemBook.createDate}}</p>
     <p><span class="bold">Is Available:</span> {{itemBook.isAvailable}}</p>
     <div class="wrap-button-buy">
-      <button class="button-buy" *ngIf="itemBook.isAvailable && !this.count" (click) = "onBuy()">buy</button>
+      <button class="button-buy" *ngIf="itemBook.isAvailable && itemBook.isShow" (click) = "onBuy($event)">buy</button>
     </div>
-    <p class="comment-buy"></p>
+    <p class="comment-buy" *ngIf="!itemBook.isShow">item in cart</p>
     <p class="comment-is-available" *ngIf="!itemBook.isAvailable">the product is not available for order</p>
   </div>
 </div>

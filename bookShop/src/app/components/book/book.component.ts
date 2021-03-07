@@ -21,17 +21,13 @@ export class BookComponent implements OnInit {
 
   @Input() public itemBook:IBook;
 
-  count:number = 0;
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onBuy() {
-    const comment = document.querySelector('.comment-buy');
-    comment.textContent = 'item in cart';
-    this.count = 1;
+    this.itemBook.isShow = false;
   }
 
 }
