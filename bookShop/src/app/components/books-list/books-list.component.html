@@ -2,12 +2,10 @@
   <h2>best books for you</h2>
   <p class="description-wrap-books">You don't need a magic wand to stop time. Take tea and book.</p>
   <div class="wrap-list">
-    <!-- <p>{{listBooks[0].name}}</p>
-    <p>{{listBooks[1].name}}</p>
-    <p>{{listBooks[2].name}}</p> -->
-    <app-book
-    *ngFor="let itemBook of listBooks"
-    [itemBook]="itemBook"
-    ></app-book>
+      <app-book
+      *ngFor="let itemBook of listBooks"
+      [itemBook]="itemBook"
+      [ngClass]="{wrap: true}"
+      ></app-book>
   </div>
 </div>

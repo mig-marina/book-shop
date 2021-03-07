@@ -18,19 +18,10 @@ enum Categories {
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-  // post:IBook =
-  //     {
-  //       name: 'The ABC Murders',
-  //       description: 'Agatha Christie. "Murder by Alphabet" is a novel where Agatha Christie throws a new riddle to her favorite Hercule Poirot - letters and a railway directory, according to the alphabet of which murders take place in different cities. A lover of details, an attentive listener and observer, the great detective removes suspicion from the innocent and unravels a complex matter.',
-  //       price: 23,
-  //       category: Categories.Detective,
-  //       createDate: 2019,
-  //       isAvailable: true,
-  //     }
 
   @Input() public itemBook:IBook;
 
-    count:number = 0;
+  count:number = 0;
 
   constructor() { }
 

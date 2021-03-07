@@ -1,16 +1,15 @@
 <div class="book-content">
   <div class="wrap-book-content">
-    <div>{{itemBook.name}}</div>
-    <!-- <h2>{{post.name}}</h2>
-    <h3>Category: {{post.category}}</h3>
-    <p class="description">{{post.description}}</p>
-    <p><span class="bold">Price:</span> {{post.price}}</p>
-    <p><span class="bold">Data:</span> {{post.createDate}}</p>
-    <p><span class="bold">Is Available:</span> {{post.isAvailable}}</p>
+    <h3>{{itemBook.name}}</h3>
+    <h4>{{itemBook.category}}</h4>
+    <p class="description">{{itemBook.description}}</p>
+    <p><span class="bold">Price:</span> {{itemBook.price}}</p>
+    <p><span class="bold">Data:</span> {{itemBook.createDate}}</p>
+    <p><span class="bold">Is Available:</span> {{itemBook.isAvailable}}</p>
     <div class="wrap-button-buy">
-      <button class="button-buy" *ngIf="post.isAvailable && !this.count" (click) = "onBuy()">buy</button>
+      <button class="button-buy" *ngIf="itemBook.isAvailable && !this.count" (click) = "onBuy()">buy</button>
     </div>
     <p class="comment-buy"></p>
-    <p class="comment-is-available" *ngIf="!post.isAvailable">the product is not available for order</p> -->
+    <p class="comment-is-available" *ngIf="!itemBook.isAvailable">the product is not available for order</p>
   </div>
 </div>

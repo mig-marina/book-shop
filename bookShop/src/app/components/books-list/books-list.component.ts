@@ -12,7 +12,6 @@ enum Categories {
   Horror = 'Horror'
 }
 
-// import { books } from '../../shared/mock-data/data-books';
 import { BooksService } from '../../services/books/books.service';
 
 @Component({
@@ -21,7 +20,7 @@ import { BooksService } from '../../services/books/books.service';
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent implements OnInit {
-  // listBooks:IBook[] = books;
+  
   listBooks:IBook[] = [];
   constructor(private booksService: BooksService) { }
 
