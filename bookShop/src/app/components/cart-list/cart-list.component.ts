@@ -3,12 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { IListBooks } from './../../ilist-books';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-cart-list',
+  templateUrl: './cart-list.component.html',
+  styleUrls: ['./cart-list.component.css']
 })
-
-export class CartComponent implements OnInit {
+export class CartListComponent implements OnInit {
 
   listBooks:IListBooks[] = [
     {
