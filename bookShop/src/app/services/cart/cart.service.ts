@@ -12,6 +12,10 @@ export class CartService {
 
   constructor() { }
 
+  getCartProduct():IBooksList[] {
+    return this.cartProduct;
+  }
+
   addBook(data):IBooksList[] {
     const item = {
       id: this.cartProduct.length,

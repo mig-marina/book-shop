@@ -9,7 +9,7 @@
     </div>
 
     <div>
-      <app-cart-item *ngFor="let itemBook of listBooks" [itemBook]="itemBook" (changeCountInList)="changeCountInList($event)" (deleteItemInList)="deleteItemInList($event)"></app-cart-item>
+      <app-cart-item *ngFor="let itemBook of listBookForCart" [itemBook]="itemBook" (changeCountInList)="changeCountInList($event)" (deleteItemInList)="deleteItemInList($event)"></app-cart-item>
     </div>
 
     <p class="result">total to pay: <b>{{summ}}</b></p>

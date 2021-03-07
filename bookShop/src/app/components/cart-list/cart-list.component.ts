@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IListBooks } from './../../ilist-books';
+import { IListBooks } from './../../ilist-books'; //delete
+import { IBooksList } from '../../ibooks-list';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-cart-list',
@@ -9,6 +11,8 @@ import { IListBooks } from './../../ilist-books';
 })
 export class CartListComponent implements OnInit {
 
+  listBookForCart: IBooksList[] = [];
+  //delete
   listBooks:IListBooks[] = [
     {
       id: 0,
@@ -39,14 +43,18 @@ export class CartListComponent implements OnInit {
   summ:number = 0;
   message:string = 'Your comment to the order will be displayed here';
 
-  getSum() {
-    this.summ = this.listBooks.reduce((s,item) => s + item.price * item.count, 0);
+  constructor(private cartService: CartService) {
+    this.listBookForCart = this.cartService.getCartProduct();
+    console.log(this.listBookForCart);
   }
-
-  constructor() { }
 
   ngOnInit(): void {
     this.getSum();
+  }
+
+  ngAfterViewChecked() {
+    this.listBookForCart = this.cartService.getCartProduct();
+    console.log(this.listBookForCart);
   }
 
   changeCountInList() {
@@ -57,6 +65,10 @@ export class CartListComponent implements OnInit {
     this.listBooks = this.listBooks.filter((item) => item.id !== data.id);
     this.getSum();
   }
+
+    getSum() {
+      this.summ = this.listBooks.reduce((s,item) => s + item.price * item.count, 0);
+    }
 
   updateUserMessage(event) {
     const messageUser = event.target.value;
