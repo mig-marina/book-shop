@@ -35,8 +35,10 @@ h2 {
   justify-content: flex-end;
 }
 
-.button-complete {
+.button-complete,
+.button-reset {
   padding: 10px;
+  margin-left: 10px;
   border: none;
   border: 1px solid #064B73;
   border-radius: 10px;
@@ -46,12 +48,14 @@ h2 {
   transition: color .2s, background-color .2s;
 }
 
-.button-complete:hover {
+.button-complete:hover,
+.button-reset:hover {
     color: #FFF;
     background-color: #064B73;
 }
 
-.button-complete:focus {
+.button-complete:focus,
+.button-reset:focus {
     outline: none;
 }
 

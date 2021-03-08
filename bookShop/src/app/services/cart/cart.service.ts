@@ -50,7 +50,11 @@ export class CartService {
   removeBook(data) {
     this.cartProduct = this.cartProduct.filter((item) => item.id !== data.id);
     this.updateCartData();
-    // console.log(this.totalQuantity);
+  }
+
+  removeAllBook() {
+    this.cartProduct = [];
+    this.updateCartData();
   }
 
   updateCartData() {

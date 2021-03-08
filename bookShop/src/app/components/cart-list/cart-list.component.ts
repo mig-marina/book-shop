@@ -50,4 +50,9 @@ export class CartListComponent implements OnInit {
     this.updateList();
   }
 
+  deleteAllItem() {
+    this.cartService.removeAllBook();
+    this.updateList();
+  }
+
 }
