@@ -79,10 +79,15 @@ h2 {
   text-align: right;
 }
 
-.result b {
+.result b,
+.result-count b {
   padding-left: 20px;
   font-weight: bold;
   color: darkred;
+}
+
+.result-count {
+  text-align: right;
 }
 
 .wrap-user-message {

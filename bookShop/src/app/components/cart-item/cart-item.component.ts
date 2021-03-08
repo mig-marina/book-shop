@@ -30,9 +30,4 @@ export class CartItemComponent implements OnInit {
     this.cartService.decreaseQuantity(itemBook);
   }
 
-  //
-  // deleteItem(itemBook) {
-  //   this.deleteItemInList.emit(itemBook);
-  // }
-
 }
