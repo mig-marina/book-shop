@@ -18,6 +18,13 @@
   width: 15%;
 }
 
+.cart-item-title  p,
+.cart-item-count p,
+.cart-item-price p {
+  padding: 0;
+  margin: 0;
+}
+
 .button-settings {
   padding: 5px;
   margin-right: 5px;

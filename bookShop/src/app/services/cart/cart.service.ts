@@ -47,6 +47,12 @@ export class CartService {
     }
   }
 
+  removeBook(data) {
+    this.cartProduct = this.cartProduct.filter((item) => item.id !== data.id);
+    this.updateCartData();
+    // console.log(this.totalQuantity);
+  }
+
   updateCartData() {
     this.totalQuantity = this.cartProduct.reduce((s, item) => s += item.count, 0);
     this.totalSum = this.cartProduct.reduce((s, item) => s += item.item.price * item.count, 0);

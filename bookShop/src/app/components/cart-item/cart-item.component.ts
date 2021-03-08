@@ -12,9 +12,7 @@ import { CartService } from '../../services/cart/cart.service';
 export class CartItemComponent implements OnInit {
 
   @Input() public itemBook:IBooksList;
-
-  @Output() increaseItem = new EventEmitter();
-  @Output() decreaseItem = new EventEmitter();
+  @Output() deleteItem = new EventEmitter();
 
   constructor(private cartService: CartService) { }
 
@@ -30,4 +28,7 @@ export class CartItemComponent implements OnInit {
     this.cartService.decreaseQuantity(itemBook);
   }
 
+  delete(itemBook) {
+    this.deleteItem.emit(itemBook);
+  }
 }

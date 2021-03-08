@@ -1,11 +1,10 @@
       <div class="cart-item-content">
-        <div class="cart-item-title">{{itemBook.item.name}}</div>
-        <div class="cart-item-count">{{itemBook.count}}</div>
-        <div class="cart-item-price">{{itemBook.item.price * itemBook.count}}</div>
+        <div class="cart-item-title"><p>{{itemBook.item.name}}</p></div>
+        <div class="cart-item-count"><p>{{itemBook.count}}</p></div>
+        <div class="cart-item-price"><p>{{itemBook.item.price * itemBook.count}}</p></div>
         <div class="cart-item-settings">
           <button class="button-settings" (click)="increase(itemBook)">+ 1</button>
           <button class="button-settings" (click)="decrease(itemBook)">- 1</button>
-          <button class="button-settings">delete</button>
-          <!-- <button class="button-settings" (click)="deleteItem(itemBook)">delete</button> -->
+          <button class="button-settings" (click)="delete(itemBook)">delete</button>
         </div>
       </div>

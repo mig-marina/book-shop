@@ -45,4 +45,9 @@ export class CartListComponent implements OnInit {
     this.message = messageUser;
   }
 
+  deleteItem(data) {
+    this.cartService.removeBook(data);
+    this.updateList();
+  }
+
 }
