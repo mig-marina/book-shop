@@ -16,6 +16,14 @@ export class CartService {
     return this.cartProduct;
   }
 
+  getTotalQuantity():number {
+    return this.totalQuantity;
+  }
+
+  getTotalSum():number {
+    return this.totalSum;
+  }
+
   addBook(data):IBooksList[] {
     const item = {
       id: this.cartProduct.length,
@@ -42,8 +50,6 @@ export class CartService {
   updateCartData() {
     this.totalQuantity = this.cartProduct.reduce((s, item) => s += item.count, 0);
     this.totalSum = this.cartProduct.reduce((s, item) => s += item.item.price * item.count, 0);
-    console.log(this.totalQuantity);
-    console.log(this.totalSum);
   }
 
 }

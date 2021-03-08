@@ -20,14 +20,24 @@ export class CartListComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateList();
+    this.updateData();
   }
 
   ngAfterViewChecked() {
     this.updateList();
   }
 
+  ngAfterContentChecked() {
+    this.updateData();
+  }
+
   updateList() {
     this.listBookForCart = this.cartService.getCartProduct();
+  }
+
+  updateData() {
+    this.count = this.cartService.getTotalQuantity();
+    this.summ = this.cartService.getTotalSum();
   }
 
   updateUserMessage(event) {
