@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-// import { IListBooks } from './../../ilist-books';
+
 import { IBooksList } from '../../ibooks-list';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-cart-item',
@@ -10,35 +11,28 @@ import { IBooksList } from '../../ibooks-list';
 
 export class CartItemComponent implements OnInit {
 
-  // @Input() public itemBook:IListBooks;
   @Input() public itemBook:IBooksList;
-  @Output() changeCountInList = new EventEmitter();
-  @Output() deleteItemInList = new EventEmitter();
 
-  constructor() { }
+  @Output() increaseItem = new EventEmitter();
+  @Output() decreaseItem = new EventEmitter();
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
 
   }
 
-  changeCount(itemBook, event) {
-    switch (event) {
-      case 1:
-        itemBook.count = itemBook.count + 1;
-        break;
-      case 2:
-        if(itemBook.count !== 0) {
-          itemBook.count = itemBook.count - 1;
-        }
-        break;
-      default:
-        break;
-    }
-    this.changeCountInList.emit(itemBook);
+  increase(itemBook) {
+    this.cartService.increaseQuantity(itemBook);
   }
 
-  deleteItem(itemBook) {
-    this.deleteItemInList.emit(itemBook);
+  decrease(itemBook) {
+    this.cartService.decreaseQuantity(itemBook);
   }
+
+  //
+  // deleteItem(itemBook) {
+  //   this.deleteItemInList.emit(itemBook);
+  // }
 
 }

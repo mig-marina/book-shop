@@ -26,4 +26,14 @@ export class CartService {
     return this.cartProduct;
   }
 
+  increaseQuantity(data) {
+    this.cartProduct.filter((item) => item.id === data.id)[0].count += 1;
+  }
+
+  decreaseQuantity(data) {
+    if(this.cartProduct.filter((item) => item.id === data.id)[0].count !== 0) {
+      this.cartProduct.filter((item) => item.id === data.id)[0].count -= 1;
+    }
+  }
+
 }

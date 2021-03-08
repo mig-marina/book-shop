@@ -45,7 +45,6 @@ export class CartListComponent implements OnInit {
 
   constructor(private cartService: CartService) {
     this.listBookForCart = this.cartService.getCartProduct();
-    console.log(this.listBookForCart);
   }
 
   ngOnInit(): void {
@@ -54,17 +53,16 @@ export class CartListComponent implements OnInit {
 
   ngAfterViewChecked() {
     this.listBookForCart = this.cartService.getCartProduct();
-    console.log(this.listBookForCart);
   }
 
   changeCountInList() {
     this.getSum();
   }
 
-  deleteItemInList(data) {
-    this.listBooks = this.listBooks.filter((item) => item.id !== data.id);
-    this.getSum();
-  }
+  // deleteItemInList(data) {
+  //   this.listBooks = this.listBooks.filter((item) => item.id !== data.id);
+  //   this.getSum();
+  // }
 
     getSum() {
       this.summ = this.listBookForCart.reduce((s,item) => s + item.item.price * item.count, 0);
@@ -74,5 +72,14 @@ export class CartListComponent implements OnInit {
     const messageUser = event.target.value;
     this.message = messageUser;
   }
+
+  // increaseItem(data) {
+  //   console.log('click to list');
+  //   this.cartService.increaseQuantity(data);
+  // }
+  //
+  // decreaseItem(data) {
+  //   this.cartService.decreaseQuantity(data);
+  // }
 
 }
