@@ -14,10 +14,8 @@ export class AppComponent {
   @ViewChild("appTitle", {static: false})
   description: ElementRef;
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.description.nativeElement.textContent = this.prefixNameShop + this.nameShop;
-    }, 0);
-  }
+   ngAfterViewInit() {
+     this.description.nativeElement.textContent = this.prefixNameShop + this.nameShop;
+   }
 
 }
