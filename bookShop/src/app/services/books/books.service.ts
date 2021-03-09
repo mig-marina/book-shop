@@ -19,7 +19,6 @@ import { books } from '../../shared/mock-data/data-books';
 })
 
 export class BooksService {
-  constructor() { }
 
   getBooks():IBook[] {
     return books;

@@ -20,14 +20,14 @@ h2 {
 
 .description {
   padding: 20px 0;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #DDDDDD;
 }
 
 .description:before {
   content: '**';
   font-size: 20px;
   padding-right: 10px;
-  color: darkred;
+  color: #8B0000;
 }
 
 .wrap-button-complete {
@@ -50,7 +50,7 @@ h2 {
 
 .button-complete:hover,
 .button-reset:hover {
-    color: #FFF;
+    color: #FFFFFF;
     background-color: #064B73;
 }
 
@@ -78,7 +78,7 @@ h2 {
 
 .result {
   padding: 20px 0;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #DDDDDD;
   text-transform: uppercase;
   text-align: right;
 }
@@ -87,7 +87,7 @@ h2 {
 .result-count b {
   padding-left: 20px;
   font-weight: bold;
-  color: darkred;
+  color: #8B0000;
 }
 
 .result-count {
@@ -96,7 +96,7 @@ h2 {
 
 .wrap-user-message {
   display: flex;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #DDDDDD;
   padding: 20px 0;
 }
 
@@ -122,5 +122,5 @@ h2 {
   content: "*";
   font-size: 20px;
   padding-right: 10px;
-  color: darkred;
+  color: #8B0000;
 }

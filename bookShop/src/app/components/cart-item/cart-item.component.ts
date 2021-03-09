@@ -9,16 +9,12 @@ import { CartService } from '../../services/cart/cart.service';
   styleUrls: ['./cart-item.component.css']
 })
 
-export class CartItemComponent implements OnInit {
+export class CartItemComponent {
 
   @Input() public itemBook:IBooksList;
   @Output() deleteItem = new EventEmitter();
 
   constructor(private cartService: CartService) { }
-
-  ngOnInit(): void {
-
-  }
 
   increase(itemBook) {
     this.cartService.increaseQuantity(itemBook);
@@ -31,4 +27,5 @@ export class CartItemComponent implements OnInit {
   delete(itemBook) {
     this.deleteItem.emit(itemBook);
   }
+
 }

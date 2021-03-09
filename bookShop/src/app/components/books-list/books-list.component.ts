@@ -32,10 +32,6 @@ export class BooksListComponent implements OnInit {
     this.getBooks();
   }
 
-  // ngAfterViewChecked() {
-  //   this.updateListCart();
-  // }
-
   getBooks(): void {
     this.listBooks = this.booksService.getBooks();
   }
@@ -43,6 +39,5 @@ export class BooksListComponent implements OnInit {
   onBuyBook(data) {
     this.cartService.addBook(data);
   }
-
 
 }

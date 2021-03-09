@@ -17,15 +17,10 @@ enum Categories {
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
-export class BookComponent implements OnInit {
+export class BookComponent {
 
   @Input() public itemBook:IBook;
   @Output() onBuyBook = new EventEmitter();
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onBuy(itemBook) {
     this.itemBook.isShow = false;

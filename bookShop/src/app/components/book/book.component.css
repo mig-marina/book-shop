@@ -21,7 +21,7 @@ h3 {
 .description {
   padding: 20px 0;
   text-align: justify;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 .bold {
@@ -47,7 +47,7 @@ h3 {
 }
 
 .button-buy:hover {
-    color: #FFF;
+    color: #FFFFFF;
     background-color: #064B73;
 }
 

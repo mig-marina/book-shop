@@ -10,8 +10,6 @@ export class CartService {
   totalQuantity: number = 0;
   totalSum: number = 0;
 
-  constructor() { }
-
   getCartProduct():IBooksList[] {
     return this.cartProduct;
   }

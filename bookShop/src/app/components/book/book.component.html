@@ -9,10 +9,14 @@
     <div class="wrap-button-buy">
       <button class="button-buy"
       *ngIf="itemBook.isAvailable && itemBook.isShow"
-      (click) = "onBuy(itemBook)"
+      (click)="onBuy(itemBook)"
       >buy</button>
     </div>
-    <p class="comment-buy" *ngIf="!itemBook.isShow">item in cart</p>
-    <p class="comment-is-available" *ngIf="!itemBook.isAvailable">the product is not available for order</p>
+    <p class="comment-buy"
+    *ngIf="!itemBook.isShow"
+    >item in cart</p>
+    <p class="comment-is-available"
+    *ngIf="!itemBook.isAvailable"
+    >the product is not available for order</p>
   </div>
 </div>
