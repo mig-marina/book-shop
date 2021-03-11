@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class GeneratorService {
 
-  possible:string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  str:string = '';
-  arraySumbols:string[] = [];
-  countSumbols:number;
+  possible: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  str: string = '';
+  arraySumbols: string[] = [];
+  countSumbols: number;
 
-  constructor(n:number) {
+  constructor(n: number) {
     this.countSumbols = n;
   }
 
