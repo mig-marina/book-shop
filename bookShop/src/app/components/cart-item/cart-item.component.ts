@@ -1,0 +1,31 @@
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+import { IBooksList } from '../../ibooks-list';
+import { CartService } from '../../services/cart/cart.service';
+
+@Component({
+  selector: 'app-cart-item',
+  templateUrl: './cart-item.component.html',
+  styleUrls: ['./cart-item.component.css']
+})
+
+export class CartItemComponent {
+
+  @Input() public itemBook: IBooksList;
+  @Output() deleteItem = new EventEmitter();
+
+  constructor(private cartService: CartService) { }
+
+  increase(itemBook) {
+    this.cartService.increaseQuantity(itemBook);
+  }
+
+  decrease(itemBook) {
+    this.cartService.decreaseQuantity(itemBook);
+  }
+
+  delete(itemBook) {
+    this.deleteItem.emit(itemBook);
+  }
+
+}

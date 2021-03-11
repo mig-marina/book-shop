@@ -5,7 +5,7 @@
 }
 
 .cart-item-content:hover {
-  background-color: #DDD;
+  background-color: #DDDDDD;
 }
 
 .cart-item-title {
@@ -16,6 +16,13 @@
 .cart-item-price,
 .cart-item-settings {
   width: 15%;
+}
+
+.cart-item-title  p,
+.cart-item-count p,
+.cart-item-price p {
+  padding: 0;
+  margin: 0;
 }
 
 .button-settings {
@@ -30,7 +37,7 @@
 }
 
 .button-settings:hover {
-    color: #FFF;
+    color: #FFFFFF;
     background-color: #064B73;
 }
 

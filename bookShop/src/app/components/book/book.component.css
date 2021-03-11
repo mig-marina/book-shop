@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap');
-
 .book-content {
-  width: 90%;
+  width: 95%;
   margin: 20px auto;
   border: 1px solid #0B0B5D;
   border-radius: 20px;
@@ -11,10 +9,10 @@
 }
 
 .wrap-book-content {
-  padding: 50px;
+  padding: 30px;
 }
 
-h2 {
+h3 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
@@ -23,7 +21,7 @@ h2 {
 .description {
   padding: 20px 0;
   text-align: justify;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 .bold {
@@ -49,7 +47,7 @@ h2 {
 }
 
 .button-buy:hover {
-    color: #FFF;
+    color: #FFFFFF;
     background-color: #064B73;
 }
 
@@ -59,6 +57,7 @@ h2 {
 
 .comment-buy,
 .comment-is-available {
+  font-size: 12px;
   text-align: right;
   color: #064B73;
   text-transform: uppercase;

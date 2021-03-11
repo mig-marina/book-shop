@@ -1,12 +1,13 @@
 <header>
-  <h1 #appTitle>{{appTitle.textContent}}</h1>
+  <h1 #appTitle></h1>
   <p>{{descriptionNameShop}}</p>
 </header>
 
-<app-book></app-book>
-<app-cart></app-cart>
+<app-books-list></app-books-list>
+<app-cart-list></app-cart-list>
+<app-about></app-about>
 
 <footer>
-  <p>{{appTitle.textContent}}</p>
+  <p>{{prefixNameShop + nameShop}}</p>
   <p>2021</p>
 </footer>

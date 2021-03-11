@@ -20,14 +20,14 @@ h2 {
 
 .description {
   padding: 20px 0;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #DDDDDD;
 }
 
 .description:before {
   content: '**';
   font-size: 20px;
   padding-right: 10px;
-  color: darkred;
+  color: #8B0000;
 }
 
 .wrap-button-complete {
@@ -35,8 +35,10 @@ h2 {
   justify-content: flex-end;
 }
 
-.button-complete {
+.button-complete,
+.button-reset {
   padding: 10px;
+  margin-left: 10px;
   border: none;
   border: 1px solid #064B73;
   border-radius: 10px;
@@ -46,12 +48,14 @@ h2 {
   transition: color .2s, background-color .2s;
 }
 
-.button-complete:hover {
-    color: #FFF;
+.button-complete:hover,
+.button-reset:hover {
+    color: #FFFFFF;
     background-color: #064B73;
 }
 
-.button-complete:focus {
+.button-complete:focus,
+.button-reset:focus {
     outline: none;
 }
 
@@ -74,20 +78,25 @@ h2 {
 
 .result {
   padding: 20px 0;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #DDDDDD;
   text-transform: uppercase;
   text-align: right;
 }
 
-.result b {
+.result b,
+.result-count b {
   padding-left: 20px;
   font-weight: bold;
-  color: darkred;
+  color: #8B0000;
+}
+
+.result-count {
+  text-align: right;
 }
 
 .wrap-user-message {
   display: flex;
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #DDDDDD;
   padding: 20px 0;
 }
 
@@ -113,5 +122,5 @@ h2 {
   content: "*";
   font-size: 20px;
   padding-right: 10px;
-  color: darkred;
+  color: #8B0000;
 }
