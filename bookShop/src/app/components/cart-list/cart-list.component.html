@@ -8,13 +8,16 @@
       <div class="cart-item-settings">Options</div>
     </div>
 
-    <div>
+    <div *ngIf="listBookForCart.length !== 0; else emptyCard">
       <app-cart-item
         *ngFor="let itemBook of listBookForCart"
         [itemBook]="itemBook"
         (deleteItem)="deleteItem($event)">
       </app-cart-item>
     </div>
+    <ng-template #emptyCard>
+      <p class="empty-card">your cart is empty yet...</p>
+    </ng-template>
 
     <p class="result">total to pay: <b>{{summ}}</b></p>
     <p class="result-count">total items in the cart: <b>{{count}}</b></p>
@@ -33,6 +36,6 @@
       <button class="button-complete">complete order</button>
       <button class="button-reset" (click)="deleteAllItem()">reset</button>
     </div>
-    
+
   </div>
 </div>

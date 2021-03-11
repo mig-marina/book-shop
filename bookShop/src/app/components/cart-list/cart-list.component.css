@@ -114,13 +114,16 @@ h2 {
   outline: none;
 }
 
-.comment-description {
-
-}
-
 .comment-description:before {
   content: "*";
   font-size: 20px;
   padding-right: 10px;
   color: #8B0000;
+}
+
+.empty-card {
+  padding: 20px;
+  text-align: center;
+  color: #8B0000;
+  text-transform: uppercase;
 }
