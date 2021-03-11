@@ -23,7 +23,7 @@ import { CartService } from '../../services/cart/cart.service';
 })
 export class BooksListComponent implements OnInit {
 
-  listBooks:IBook[] = [];
+  listBooks: IBook[] = [];
   listCart: IBooksList[] = [];
 
   constructor(private booksService: BooksService, private cartService: CartService) { }

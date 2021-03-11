@@ -11,7 +11,7 @@ import { CartService } from '../../services/cart/cart.service';
 
 export class CartItemComponent {
 
-  @Input() public itemBook:IBooksList;
+  @Input() public itemBook: IBooksList;
   @Output() deleteItem = new EventEmitter();
 
   constructor(private cartService: CartService) { }

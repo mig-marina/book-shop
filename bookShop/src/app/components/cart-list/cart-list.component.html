@@ -10,10 +10,10 @@
 
     <div>
       <app-cart-item
-      *ngFor="let itemBook of listBookForCart"
-      [itemBook]="itemBook"
-      (deleteItem)="deleteItem($event)"
-      ></app-cart-item>
+        *ngFor="let itemBook of listBookForCart"
+        [itemBook]="itemBook"
+        (deleteItem)="deleteItem($event)">
+      </app-cart-item>
     </div>
 
     <p class="result">total to pay: <b>{{summ}}</b></p>
@@ -27,10 +27,12 @@
         <p>{{message}}</p>
       </div>
     </div>
+
     <p class="description">Check the order sheet and click "complete order" to confirm</p>
     <div class="wrap-button-complete">
       <button class="button-complete">complete order</button>
       <button class="button-reset" (click)="deleteAllItem()">reset</button>
     </div>
+    
   </div>
 </div>

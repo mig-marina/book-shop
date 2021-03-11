@@ -10,7 +10,7 @@ enum Categories {
   Horror = 'Horror'
 }
 
-export let books:IBook[] = [
+export let books: IBook[] = [
     {
       id: 1,
       name: 'The Golem\'s Eye',

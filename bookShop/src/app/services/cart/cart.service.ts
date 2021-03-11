@@ -10,19 +10,19 @@ export class CartService {
   totalQuantity: number = 0;
   totalSum: number = 0;
 
-  getCartProduct():IBooksList[] {
+  getCartProduct(): IBooksList[] {
     return this.cartProduct;
   }
 
-  getTotalQuantity():number {
+  getTotalQuantity(): number {
     return this.totalQuantity;
   }
 
-  getTotalSum():number {
+  getTotalSum(): number {
     return this.totalSum;
   }
 
-  addBook(data):IBooksList[] {
+  addBook(data): IBooksList[] {
     const item = {
       id: this.cartProduct.length,
       item: data,
@@ -34,13 +34,15 @@ export class CartService {
   }
 
   increaseQuantity(data) {
-    this.cartProduct.filter((item) => item.id === data.id)[0].count += 1;
+    let item = this.cartProduct.find((item) => item.id === data.id);
+    item.count += 1;
     this.updateCartData();
   }
 
   decreaseQuantity(data) {
-    if(this.cartProduct.filter((item) => item.id === data.id)[0].count !== 0) {
-      this.cartProduct.filter((item) => item.id === data.id)[0].count -= 1;
+    let item = this.cartProduct.find((item) => item.id === data.id);
+    if(item.count !== 0) {
+      item.count -= 1;
       this.updateCartData();
     }
   }

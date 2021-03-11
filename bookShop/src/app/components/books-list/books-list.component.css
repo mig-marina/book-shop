@@ -32,5 +32,4 @@ h2 {
 .wrap-list .wrap {
   display: flex;
   width: 50%;
-  float: left;
 }

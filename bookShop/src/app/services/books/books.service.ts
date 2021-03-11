@@ -20,7 +20,7 @@ import { books } from '../../shared/mock-data/data-books';
 
 export class BooksService {
 
-  getBooks():IBook[] {
+  getBooks(): IBook[] {
     return books;
   }
 }

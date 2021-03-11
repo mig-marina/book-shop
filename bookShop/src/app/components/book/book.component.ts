@@ -19,7 +19,7 @@ enum Categories {
 })
 export class BookComponent {
 
-  @Input() public itemBook:IBook;
+  @Input() public itemBook: IBook;
   @Output() onBuyBook = new EventEmitter();
 
   onBuy(itemBook) {
