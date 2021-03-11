@@ -1,0 +1,39 @@
+.cart-item-content {
+  display: flex;
+  padding: 20px;
+  transition: background-color .7s;
+}
+
+.cart-item-content:hover {
+  background-color: #DDD;
+}
+
+.cart-item-title {
+  width: 55%;
+}
+
+.cart-item-count,
+.cart-item-price,
+.cart-item-settings {
+  width: 15%;
+}
+
+.button-settings {
+  padding: 5px;
+  margin-right: 5px;
+  border: none;
+  border: 1px solid #064B73;
+  border-radius: 5px;
+  color: #064B73;
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.button-settings:hover {
+    color: #FFF;
+    background-color: #064B73;
+}
+
+.button-settings:focus {
+    outline: none;
+}

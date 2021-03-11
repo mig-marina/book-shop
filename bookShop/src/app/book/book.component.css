@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap');
+
+.book-content {
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #0B0B5D;
+  border-radius: 20px;
+  user-select: none;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+}
+
+.wrap-book-content {
+  padding: 50px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.description {
+  padding: 20px 0;
+  text-align: justify;
+  border-bottom: 1px solid #DDD;
+}
+
+.bold {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #064B73;
+}
+
+.wrap-button-buy {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-buy {
+  padding: 10px;
+  border: none;
+  border: 1px solid #064B73;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #064B73;
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.button-buy:hover {
+    color: #FFF;
+    background-color: #064B73;
+}
+
+.button-buy:focus {
+    outline: none;
+}
+
+.comment-buy,
+.comment-is-available {
+  text-align: right;
+  color: #064B73;
+  text-transform: uppercase;
+}
