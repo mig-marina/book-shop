@@ -4,10 +4,6 @@
   transition: background-color .7s;
 }
 
-.cart-item-content:hover {
-  background-color: #DDDDDD;
-}
-
 .cart-item-title {
   width: 55%;
 }

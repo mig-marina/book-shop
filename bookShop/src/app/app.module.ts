@@ -8,7 +8,6 @@ import { SharedModule } from './modules/shared/shared.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
