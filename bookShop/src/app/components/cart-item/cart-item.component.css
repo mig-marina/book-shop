@@ -40,3 +40,15 @@
 .button-settings:focus {
     outline: none;
 }
+
+.disable .cart-item-title {
+  color: #8B0000;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.disable .cart-item-title p:before {
+  content: '*';
+  padding-right: 10px;
+  font-weight: bold;
+}

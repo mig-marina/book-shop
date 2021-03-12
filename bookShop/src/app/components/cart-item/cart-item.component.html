@@ -1,4 +1,8 @@
-<div class="cart-item-content" appCartItemOnHover>
+<div
+  class="cart-item-content"
+  appCartItemOnHover
+  [ngClass]="{disable: itemBook.count === 0}"
+>
   <div class="cart-item-title">
     <p>{{itemBook.item.name}}</p>
   </div>
