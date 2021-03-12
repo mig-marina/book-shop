@@ -7,11 +7,15 @@ import { SharedModule } from './modules/shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
+import { AddStyleOnClickDirective } from './shared/directives/add-style-on-click.directive';
+import { ExampleHostStyleComponent } from './components/example-host-style/example-host-style.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    AddStyleOnClickDirective,
+    ExampleHostStyleComponent
   ],
   imports: [
     BrowserModule,
