@@ -10,7 +10,8 @@
 
     <div *ngIf="listBookForCart.length !== 0; else emptyCard">
       <div class="sort-data">
-        <label>Select sorting type: </label> <select [(ngModel)]="typeSort">
+        <label>Select sorting type: </label>
+        <select [(ngModel)]="typeSort">
           <option></option>
           <option value="price">price</option>
           <option value="count">count</option>

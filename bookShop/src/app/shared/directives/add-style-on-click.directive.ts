@@ -1,12 +1,12 @@
-import { Directive, ElementRef, Renderer2, Input, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer2, OnChanges, Input, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appAddStyleOnClick]'
 })
 export class AddStyleOnClickDirective {
+  @Input('appAddStyleOnClick') color: string;
   isChange: boolean = false;
   size: string = '24px';
-  color: string = '#2C535A';
 
   constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
 
@@ -16,7 +16,7 @@ export class AddStyleOnClickDirective {
       this.changeStyle(this.size, this.color);
     }
     if(!this.isChange) {
-      this.changeStyle(null, null);
+      this.changeStyle(null, this.color);
     }
   }
 

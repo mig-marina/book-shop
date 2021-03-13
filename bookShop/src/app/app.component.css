@@ -24,3 +24,18 @@ footer {
   background-color: #2C535A;
   color: #FFFFFF;
 }
+
+.example {
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.example label {
+  padding: 0 10px;
+}
+
+.example input {
+  font-family: 'Shippori Mincho B1', serif;
+}
+.example input:focus {
+  outline: none;
+}

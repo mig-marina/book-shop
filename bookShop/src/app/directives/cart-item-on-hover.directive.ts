@@ -4,7 +4,7 @@ import { Directive, ElementRef, Renderer2, HostListener, HostBinding } from '@an
   selector: '[appCartItemOnHover]'
 })
 export class CartItemOnHoverDirective {
-  
+
   colorBackgroundOnHover: string = '#DDDDDD';
   colorBackground: string = 'transparent';
 

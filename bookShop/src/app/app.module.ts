@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { BooksModule } from './modules/books/books.module';
 import { CartModule } from './modules/cart/cart.module';
@@ -9,7 +10,6 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { AddStyleOnClickDirective } from './shared/directives/add-style-on-click.directive';
 import { ExampleHostStyleComponent } from './components/example-host-style/example-host-style.component';
-// import { OrderByPipe } from './shared/pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -17,13 +17,13 @@ import { ExampleHostStyleComponent } from './components/example-host-style/examp
     AboutComponent,
     AddStyleOnClickDirective,
     ExampleHostStyleComponent
-    // OrderByPipe
   ],
   imports: [
     BrowserModule,
     BooksModule,
     CartModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
