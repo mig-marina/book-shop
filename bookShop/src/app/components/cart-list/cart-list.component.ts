@@ -12,19 +12,17 @@ export class CartListComponent implements OnInit {
 
   listBookForCart: IBooksList[] = [];
 
-  count:number = 0;
-  summ:number = 0;
-  message:string = 'Your comment to the order will be displayed here';
+  count: number = 0;
+  summ: number = 0;
+  message: string = 'Your comment to the order will be displayed here';
+  typeSort: string = '';
+  isDescending: boolean = true;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.updateList();
     this.updateData();
-  }
-
-  ngAfterViewChecked() {
-    this.updateList();
   }
 
   ngAfterContentChecked() {
@@ -46,6 +44,7 @@ export class CartListComponent implements OnInit {
   }
 
   deleteItem(data) {
+    console.log('parent');
     this.cartService.removeBook(data);
     this.updateList();
   }
