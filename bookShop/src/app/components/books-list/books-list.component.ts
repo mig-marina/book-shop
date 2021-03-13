@@ -33,7 +33,7 @@ export class BooksListComponent implements OnInit {
   }
 
   getBooks(): void {
-    this.listBooks = this.booksService.getBooks();
+    this.listBooks = this.booksService.getBooks().then((data) => {return data});
   }
 
   onBuyBook(data) {

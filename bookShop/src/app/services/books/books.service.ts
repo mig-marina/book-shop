@@ -20,8 +20,12 @@ import { books } from '../../shared/mock-data/data-books';
 
 export class BooksService {
 
-  getBooks(): IBook[] {
-    return books;
+  getBooks(): any {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(books);
+      }, 3000);
+    });
   }
 
 }
