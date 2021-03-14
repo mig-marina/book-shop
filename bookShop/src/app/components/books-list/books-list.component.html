@@ -3,7 +3,7 @@
   <p class="description-wrap-books">You don't need a magic wand to stop time. Take tea and book.</p>
   <div class="wrap-list">
       <app-book
-        *ngFor="let itemBook of listBooks | async"
+        *ngFor="let itemBook of listBooks"
         [itemBook]="itemBook"
         (onBuyBook)="onBuyBook($event)"
         class="wrap">

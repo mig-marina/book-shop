@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs';
+import { of } from 'rxjs';
 
 import { IBook } from './../../ibook';
 
@@ -21,11 +23,7 @@ import { books } from '../../shared/mock-data/data-books';
 export class BooksService {
 
   getBooks(): any {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(books);
-      }, 3000);
-    });
+    return of(books);
   }
 
 }
