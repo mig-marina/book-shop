@@ -44,7 +44,6 @@ export class CartListComponent implements OnInit {
   }
 
   deleteItem(data) {
-    console.log('parent');
     this.cartService.removeBook(data);
     this.updateList();
   }
