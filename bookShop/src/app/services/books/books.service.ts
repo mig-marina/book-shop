@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs';
+import { of } from 'rxjs';
 
 import { IBook } from './../../ibook';
 
@@ -20,7 +22,8 @@ import { books } from '../../shared/mock-data/data-books';
 
 export class BooksService {
 
-  getBooks(): IBook[] {
-    return books;
+  getBooks(): Observable<IBook[]> {
+    return of(books);
   }
+
 }

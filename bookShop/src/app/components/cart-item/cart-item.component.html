@@ -1,4 +1,8 @@
-<div class="cart-item-content">
+<div
+  class="cart-item-content"
+  appCartItemOnHover
+  [ngClass]="{disable: itemBook.count === 0}"
+>
   <div class="cart-item-title">
     <p>{{itemBook.item.name}}</p>
   </div>
@@ -6,7 +10,7 @@
     <p>{{itemBook.count}}</p>
   </div>
   <div class="cart-item-price">
-    <p>{{itemBook.item.price * itemBook.count}}</p>
+    <p>{{itemBook.item.price * itemBook.count | number:"1.2"}}</p>
   </div>
   <div class="cart-item-settings">
     <button class="button-settings" (click)="increase(itemBook)">+ 1</button>

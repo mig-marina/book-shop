@@ -8,15 +8,30 @@
       <div class="cart-item-settings">Options</div>
     </div>
 
-    <div>
+    <div *ngIf="listBookForCart.length !== 0; else emptyCard">
+      <div class="sort-data">
+        <label>Select sorting type: </label>
+        <select [(ngModel)]="typeSort">
+          <option></option>
+          <option value="price">price</option>
+          <option value="count">count</option>
+          <option value="name">name</option>
+        </select>
+        <label>Descending sort: </label>
+        <input type="checkbox" [(ngModel)]="isDescending" checked>
+      </div>
+
       <app-cart-item
-        *ngFor="let itemBook of listBookForCart"
+        *ngFor="let itemBook of listBookForCart | orderBy:typeSort:isDescending"
         [itemBook]="itemBook"
         (deleteItem)="deleteItem($event)">
       </app-cart-item>
     </div>
+    <ng-template #emptyCard>
+      <p class="empty-card">your cart is empty yet...</p>
+    </ng-template>
 
-    <p class="result">total to pay: <b>{{summ}}</b></p>
+    <p class="result">total to pay: <b>{{summ | number:"1.2"}}</b></p>
     <p class="result-count">total items in the cart: <b>{{count}}</b></p>
     <div class="wrap-user-message">
       <div>
@@ -33,6 +48,6 @@
       <button class="button-complete">complete order</button>
       <button class="button-reset" (click)="deleteAllItem()">reset</button>
     </div>
-    
+
   </div>
 </div>

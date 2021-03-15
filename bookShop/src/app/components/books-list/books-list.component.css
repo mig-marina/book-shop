@@ -23,12 +23,6 @@ h2 {
   flex-wrap: wrap;
 }
 
-.wrap-list:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .wrap-list .wrap {
   display: flex;
   width: 50%;

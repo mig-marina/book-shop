@@ -1,9 +1,9 @@
 <div class="book-content">
   <div class="wrap-book-content">
     <h3>{{itemBook.name}}</h3>
-    <h4>{{itemBook.category}}</h4>
+    <h4>{{itemBook.category | uppercase}}</h4>
     <p class="description">{{itemBook.description}}</p>
-    <p><span class="bold">Price:</span> {{itemBook.price}}</p>
+    <p><span class="bold">Price:</span> {{itemBook.price | number:"1.2"}}</p>
     <p><span class="bold">Data:</span> {{itemBook.createDate}}</p>
     <p><span class="bold">Is Available:</span> {{itemBook.isAvailable}}</p>
     <div class="wrap-button-buy">

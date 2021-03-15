@@ -4,10 +4,6 @@
   transition: background-color .7s;
 }
 
-.cart-item-content:hover {
-  background-color: #DDDDDD;
-}
-
 .cart-item-title {
   width: 55%;
 }
@@ -43,4 +39,16 @@
 
 .button-settings:focus {
     outline: none;
+}
+
+.disable .cart-item-title {
+  color: #8B0000;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.disable .cart-item-title p:before {
+  content: '*';
+  padding-right: 10px;
+  font-weight: bold;
 }

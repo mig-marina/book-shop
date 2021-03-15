@@ -114,13 +114,39 @@ h2 {
   outline: none;
 }
 
-.comment-description {
-
-}
-
 .comment-description:before {
   content: "*";
   font-size: 20px;
   padding-right: 10px;
   color: #8B0000;
+}
+
+.empty-card {
+  padding: 20px;
+  text-align: center;
+  color: #8B0000;
+  text-transform: uppercase;
+}
+
+.sort-data {
+  padding: 10px 0;
+}
+
+.sort-data label {
+  padding: 0 10px;
+  color: #064B73;
+}
+
+.sort-data select {
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 14px;
+  color: #064B73;
+  letter-spacing: 2px;
+}
+
+.sort-data select:focus {
+  outline: none;
 }

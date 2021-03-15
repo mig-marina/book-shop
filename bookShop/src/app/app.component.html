@@ -7,6 +7,12 @@
 <app-cart-list></app-cart-list>
 <app-about></app-about>
 
+<div class="example">
+  <label>Enter color name (red or #FFF or...): </label>
+  <input type="text" [(ngModel)]="color" />
+  <app-example-host-style [appAddStyleOnClick]="color"></app-example-host-style>
+</div>
+
 <footer>
   <p>{{prefixNameShop + nameShop}}</p>
   <p>2021</p>
