@@ -22,7 +22,7 @@ import { books } from '../../shared/mock-data/data-books';
 
 export class BooksService {
 
-  getBooks(): any {
+  getBooks(): Observable<IBook[]> {
     return of(books);
   }
 

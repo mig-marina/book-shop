@@ -33,9 +33,7 @@ export class BooksListComponent implements OnInit {
   }
 
   getBooks(): void {
-    let res;
-    this.booksService.getBooks().subscribe({ next(data) {res = data} });
-    this.listBooks = res;
+    this.booksService.getBooks().subscribe(data => this.listBooks = data);
   }
 
   onBuyBook(data) {

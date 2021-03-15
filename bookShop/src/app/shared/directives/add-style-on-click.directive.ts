@@ -12,12 +12,7 @@ export class AddStyleOnClickDirective {
 
   @HostListener("click", ['$event']) onMouseEnter(event: MouseEvent) {
     this.isChange = !this.isChange;
-    if(this.isChange) {
-      this.changeStyle(this.size, this.color);
-    }
-    if(!this.isChange) {
-      this.changeStyle(null, this.color);
-    }
+    this.changeStyle(this.isChange ? this.size: null, this.color);
   }
 
   changeStyle(size, color) {

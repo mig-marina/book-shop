@@ -11,14 +11,14 @@ export class OrderByPipe implements PipeTransform {
       return allData;
     }
     if(value === 'count' && isDescending) {
-      return allData.sort((a, b) => {return b.count - a.count});
+      return allData.sort((a, b) => b.count - a.count);
     } else if(value === 'count' && !isDescending) {
-      return allData.sort((a, b) => {return a.count - b.count});
+      return allData.sort((a, b) => a.count - b.count);
     }
     if(value === 'price' && isDescending) {
-      return allData.sort((a, b) => {return b.item.price * b.count - a.item.price * a.count});
+      return allData.sort((a, b) => b.item.price * b.count - a.item.price * a.count);
     } else if(value === 'price' && !isDescending) {
-      return allData.sort((a, b) => {return a.item.price * a.count - b.item.price * b.count});
+      return allData.sort((a, b) => a.item.price * a.count - b.item.price * b.count);
     }
     if(value === 'name' && isDescending) {
       return allData.sort((a, b) => a.item.name > b.item.name ? 1 : -1);

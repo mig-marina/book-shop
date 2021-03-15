@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './example-host-style.component.html',
   styleUrls: ['./example-host-style.component.css']
 })
-export class ExampleHostStyleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class ExampleHostStyleComponent {
 
 }
