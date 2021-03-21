@@ -1,20 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+// import { AuthGuard } from './guards/auth.guard';
+// import { ExitAboutGuard } from './guards/exit-about-guard.guard';
 
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { PageBookComponent } from './components/page-book/page-book.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { OrderComponent } from './components/order/order.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'products-list', component: BooksListComponent },
   { path: 'product/:productID', component: PageBookComponent },
   { path: 'cart', component: CartListComponent },
   { path: 'order', component: OrderComponent },
-  { path: 'admin', component: AdminComponent },
+  {
+    path: 'admin',
+    component: AdminComponent
+    // canActivate: [AuthGuard],
+    // canDeactivate: [ExitAboutGuard]
+  },
   { path: '', redirectTo: '/products-list', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

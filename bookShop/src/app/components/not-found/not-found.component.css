@@ -1,0 +1,15 @@
+.wrap-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 20px;
+}
+
+.titie-404 {
+  font-size: 50px;
+  color: #FF0000;
+  letter-spacing: 5px;
+}
