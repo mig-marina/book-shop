@@ -5,7 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { BooksModule } from './modules/books/books.module';
 import { CartModule } from './modules/cart/cart.module';
 import { OrdersModule } from './modules/orders/orders.module';
-// import { AdminModule } from './modules/admin/admin.module';
+
+//добавляю модуль админа
+import { AdminModule } from './modules/admin/admin.module';
+
 import { SharedModule } from './modules/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,11 +18,13 @@ import { AddStyleOnClickDirective } from './shared/directives/add-style-on-click
 import { ExampleHostStyleComponent } from './components/example-host-style/example-host-style.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
-import { AdminComponent } from './components/admin/admin.component';
-import { AdminProductsComponent } from './components/admin-products/admin-products.component';
-import { AdminAddProductComponent } from './components/admin-add-product/admin-add-product.component';
-import { AdminEditProductComponent } from './components/admin-edit-product/admin-edit-product.component';
-import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+
+//напрямую вот так с компонентами работает:
+// import { AdminComponent } from './components/admin/admin.component';
+// import { AdminProductsComponent } from './components/admin-products/admin-products.component';
+// import { AdminAddProductComponent } from './components/admin-add-product/admin-add-product.component';
+// import { AdminEditProductComponent } from './components/admin-edit-product/admin-edit-product.component';
+// import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
 
 @NgModule({
   declarations: [
@@ -28,18 +33,18 @@ import { AdminOrdersComponent } from './components/admin-orders/admin-orders.com
     AddStyleOnClickDirective,
     ExampleHostStyleComponent,
     NotFoundComponent,
-    AdminComponent,
-    AdminProductsComponent,
-    AdminAddProductComponent,
-    AdminEditProductComponent,
-    AdminOrdersComponent
+    // AdminComponent,
+    // AdminProductsComponent,
+    // AdminAddProductComponent,
+    // AdminEditProductComponent,
+    // AdminOrdersComponent
   ],
   imports: [
     BrowserModule,
     BooksModule,
     CartModule,
     OrdersModule,
-    // AdminModule,
+    AdminModule,
     SharedModule,
     FormsModule,
     AppRoutingModule

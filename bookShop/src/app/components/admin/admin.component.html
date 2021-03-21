@@ -3,11 +3,12 @@
     <p>You are logged in as an administrator - select one of the available tasks:</p>
 
     <nav>
+      <!-- если оставить один  routerLink то пишет другую ошибку на router-outlet-->
       <ul class="admin-menu">
         <li><a [routerLink]="['products']" routerLinkActive="active">products</a></li>
-        <li><a [routerLink]="['products/add']" routerLinkActive="active">add product</a></li>
-        <li><a [routerLink]="['products/edit']" routerLinkActive="active">edit product</a></li>
-        <li><a [routerLink]="['products/orders']" routerLinkActive="active">orders</a></li>
+        <!-- <li><a [routerLink]="['products/add']" routerLinkActive="active">add product</a></li> -->
+        <!-- <li><a [routerLink]="['products/edit']" routerLinkActive="active">edit product</a></li> -->
+        <!-- <li><a [routerLink]="['products/orders']" routerLinkActive="active">orders</a></li> -->
       </ul>
     </nav>
   </div>
