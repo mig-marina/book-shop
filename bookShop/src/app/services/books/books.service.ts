@@ -21,9 +21,29 @@ import { books } from '../../shared/mock-data/data-books';
 })
 
 export class BooksService {
+  itemBook: IBook;
+  listBooks: IBook[] = books;
 
   getBooks(): Observable<IBook[]> {
     return of(books);
+  }
+
+  setItemBooks(data): IBook {
+    return this.itemBook = books.find((item) => item.id === data);
+  }
+
+  getItemBooks(): IBook {
+    return this.itemBook;
+  }
+
+  toggleIsShow(data): IBook[] {
+    this.listBooks.filter((item) => item.id === data).forEach((item) => item.isShow = true);
+    return this.listBooks;
+  }
+
+  toggleIsShowAll() {
+    this.listBooks.filter((item) => item.isShow === false).forEach((item) => item.isShow = true);
+    return this.listBooks;
   }
 
 }

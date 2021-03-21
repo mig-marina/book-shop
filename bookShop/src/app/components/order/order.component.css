@@ -1,0 +1,82 @@
+.wrap-order {
+  padding: 50px;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+}
+
+.wrap-order .title {
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.order-address input {
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.order-address input:focus {
+  outline: none;
+  border-bottom-color: #2c535a;
+}
+
+.order-pay {
+  margin-bottom: 20px;
+}
+
+.wrap-user-message {
+  display: flex;
+  border-top: 1px solid #DDDDDD;
+  padding: 20px 0;
+}
+
+.wrap-user-message > div {
+  flex: 1;
+}
+
+.wrap-user-message textarea {
+  width: 80%;
+  height: 80px;
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.wrap-user-message textarea:focus {
+  outline: none;
+}
+
+.comment-description:before {
+  content: "*";
+  font-size: 20px;
+  padding-right: 10px;
+  color: #8B0000;
+}
+
+.order-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order-buttons .button-submit,
+.order-buttons .button-reset {
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  border: 1px solid #064B73;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #064B73;
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.order-buttons .button-submit:hover,
+.order-buttons .button-reset:hover {
+  color: #FFFFFF;
+  background-color: #064B73;
+}
+
+.order-buttons .button-submit:focus,
+.order-buttons .button-reset:focus {
+  outline: none;
+}

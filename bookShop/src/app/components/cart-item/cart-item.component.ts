@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { IBooksList } from '../../ibooks-list';
 import { CartService } from '../../services/cart/cart.service';
+import { BooksService } from '../../services/books/books.service';
 
 @Component({
   selector: 'app-cart-item',
@@ -14,7 +15,7 @@ export class CartItemComponent {
   @Input() public itemBook: IBooksList;
   @Output() deleteItem = new EventEmitter();
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private booksService: BooksService) { }
 
   increase(itemBook) {
     this.cartService.increaseQuantity(itemBook);
@@ -25,6 +26,7 @@ export class CartItemComponent {
   }
 
   delete(itemBook) {
+    this.booksService.toggleIsShow(itemBook.item.id);
     this.deleteItem.emit(itemBook);
   }
 

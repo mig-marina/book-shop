@@ -1,0 +1,29 @@
+<div class="wrap-order">
+  <p class="title">To complete the order, fill in the details and click the button</p>
+  <form>
+    <div class="order-address">
+      <p>Enter your delivery address:</p>
+      <input type="text" name="adress" required>
+    </div>
+    <div class="order-pay">
+      <p>Specify the payment method:</p>
+      <label><input type="radio" name="pay" value="1" checked>by card</label>
+      <label><input type="radio" name="pay" value="2">cash</label>
+    </div>
+
+    <div class="wrap-user-message">
+      <div>
+        <p class="comment-description">You can add a comment to your order:</p>
+        <textarea name="comment" (input)="updateUserMessage($event)"></textarea>
+      </div>
+      <div>
+        <p>{{message}}</p>
+      </div>
+    </div>
+
+    <div class="order-buttons">
+      <button class="button-submit" (click)="completeOrder()">complete my order</button>
+      <button class="button-reset" (click)="goToCart()">back to my cart</button>
+    </div>
+  </form>
+</div>

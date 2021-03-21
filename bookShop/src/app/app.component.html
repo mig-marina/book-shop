@@ -1,9 +1,20 @@
 <header>
-  <h1 #appTitle></h1>
+  <a routerLink="" routerLinkActive = "active" class="link-logo"><h1 #appTitle></h1></a>
   <p>{{descriptionNameShop}}</p>
 </header>
+<nav>
+  <ul class="main-menu">
+    <li><a routerLink="/products-list" routerLinkActive = "active">Catalog</a></li>
+  </ul>
+  <ul class="cart-menu">
+    <li><a routerLink="/cart" routerLinkActive = "active"><i class="material-icons">shopping_cart</i></a><span class="count-items-to-cart" [ngClass]="{colorEmpty: countItems === 0}">{{countItems}}</span></li>
+    <li><a routerLink="/admin" routerLinkActive = "active"><i class="material-icons">person</i></a></li>
+  </ul>
+</nav>
 
-<app-books-list></app-books-list>
+<router-outlet></router-outlet>
+
+<!-- <app-books-list></app-books-list>
 <app-cart-list></app-cart-list>
 <app-about></app-about>
 
@@ -11,7 +22,7 @@
   <label>Enter color name (red or #FFF or...): </label>
   <input type="text" [(ngModel)]="color" />
   <app-example-host-style [appAddStyleOnClick]="color"></app-example-host-style>
-</div>
+</div> -->
 
 <footer>
   <p>{{prefixNameShop + nameShop}}</p>

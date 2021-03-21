@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { IBooksList } from '../../ibooks-list';
 import { CartService } from '../../services/cart/cart.service';
+import { BooksService } from '../../services/books/books.service';
 
 @Component({
   selector: 'app-cart-list',
@@ -14,15 +16,21 @@ export class CartListComponent implements OnInit {
 
   count: number = 0;
   summ: number = 0;
-  message: string = 'Your comment to the order will be displayed here';
   typeSort: string = '';
   isDescending: boolean = true;
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private booksService: BooksService,
+    private router: Router) {}
 
   ngOnInit(): void {
     this.updateList();
     this.updateData();
+  }
+
+  goToOrder() {
+    this.router.navigate(['/order']);
   }
 
   ngAfterContentChecked() {
@@ -38,11 +46,6 @@ export class CartListComponent implements OnInit {
     this.summ = this.cartService.getTotalSum();
   }
 
-  updateUserMessage(event) {
-    const messageUser = event.target.value;
-    this.message = messageUser;
-  }
-
   deleteItem(data) {
     this.cartService.removeBook(data);
     this.updateList();
@@ -50,6 +53,7 @@ export class CartListComponent implements OnInit {
 
   deleteAllItem() {
     this.cartService.removeAllBook();
+    this.booksService.toggleIsShowAll();
     this.updateList();
   }
 

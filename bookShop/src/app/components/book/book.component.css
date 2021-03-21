@@ -37,6 +37,7 @@ h3 {
 
 .button-buy {
   padding: 10px;
+  margin-left: 10px;
   border: none;
   border: 1px solid #064B73;
   border-radius: 10px;
@@ -47,12 +48,12 @@ h3 {
 }
 
 .button-buy:hover {
-    color: #FFFFFF;
-    background-color: #064B73;
+  color: #FFFFFF;
+  background-color: #064B73;
 }
 
 .button-buy:focus {
-    outline: none;
+  outline: none;
 }
 
 .comment-buy,

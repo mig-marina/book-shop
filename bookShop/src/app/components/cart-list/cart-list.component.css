@@ -50,13 +50,13 @@ h2 {
 
 .button-complete:hover,
 .button-reset:hover {
-    color: #FFFFFF;
-    background-color: #064B73;
+  color: #FFFFFF;
+  background-color: #064B73;
 }
 
 .button-complete:focus,
 .button-reset:focus {
-    outline: none;
+  outline: none;
 }
 
 .cart-item-header {
@@ -92,33 +92,6 @@ h2 {
 
 .result-count {
   text-align: right;
-}
-
-.wrap-user-message {
-  display: flex;
-  border-top: 1px solid #DDDDDD;
-  padding: 20px 0;
-}
-
-.wrap-user-message > div {
-  flex: 1;
-}
-
-.wrap-user-message textarea {
-  width: 80%;
-  height: 80px;
-  font-family: 'Shippori Mincho B1', serif;
-}
-
-.wrap-user-message textarea:focus {
-  outline: none;
-}
-
-.comment-description:before {
-  content: "*";
-  font-size: 20px;
-  padding-right: 10px;
-  color: #8B0000;
 }
 
 .empty-card {
