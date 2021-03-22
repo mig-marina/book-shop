@@ -5,20 +5,20 @@ import { Directive, ElementRef, Renderer2, HostListener, HostBinding } from '@an
 })
 export class CartItemOnHoverDirective {
 
-  colorBackgroundOnHover: string = '#DDDDDD';
-  colorBackground: string = 'transparent';
+  colorBackgroundOnHover = '#DDDDDD';
+  colorBackground = 'transparent';
 
   constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
 
-  @HostListener("mouseenter", ['$event']) onMouseEnter(event: MouseEvent) {
+  @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent): void {
     this.isHover(this.colorBackgroundOnHover);
   }
 
-  @HostListener("mouseleave", ['$event']) onMouseLeave(event: MouseEvent) {
+  @HostListener('mouseleave', ['$event']) onMouseLeave(event: MouseEvent): void {
     this.isHover(this.colorBackground);
   }
 
-  isHover(color: string) {
+  isHover(color: string): void {
     this.renderer2.setStyle(
       this.elementRef.nativeElement,
       'background-color',

@@ -7,8 +7,8 @@ import { IBooksList } from './../../ibooks-list';
 })
 export class CartService {
   cartProduct: IBooksList[] = [];
-  totalQuantity: number = 0;
-  totalSum: number = 0;
+  totalQuantity = 0;
+  totalSum = 0;
 
   getCartProduct(): IBooksList[] {
     return this.cartProduct;
@@ -27,37 +27,37 @@ export class CartService {
       id: this.cartProduct.length,
       item: data,
       count: 1
-    }
+    };
     this.cartProduct.push(item);
     this.updateCartData();
     return this.cartProduct;
   }
 
-  increaseQuantity(data) {
-    let item = this.cartProduct.find((item) => item.id === data.id);
+  increaseQuantity(data): void {
+    const item: IBooksList = this.cartProduct.find((i) => i.id === data.id);
     item.count += 1;
     this.updateCartData();
   }
 
-  decreaseQuantity(data) {
-    let item = this.cartProduct.find((item) => item.id === data.id);
-    if(item.count !== 0) {
+  decreaseQuantity(data): void {
+    const item: IBooksList = this.cartProduct.find((i) => i.id === data.id);
+    if (item.count !== 0) {
       item.count -= 1;
       this.updateCartData();
     }
   }
 
-  removeBook(data) {
+  removeBook(data): void {
     this.cartProduct = this.cartProduct.filter((item) => item.id !== data.id);
     this.updateCartData();
   }
 
-  removeAllBook() {
+  removeAllBook(): void {
     this.cartProduct = [];
     this.updateCartData();
   }
 
-  updateCartData() {
+  updateCartData(): void {
     this.totalQuantity = this.cartProduct.reduce((s, item) => s += item.count, 0);
     this.totalSum = this.cartProduct.reduce((s, item) => s += item.item.price * item.count, 0);
   }

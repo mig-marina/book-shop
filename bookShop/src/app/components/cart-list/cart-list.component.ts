@@ -14,10 +14,10 @@ export class CartListComponent implements OnInit {
 
   listBookForCart: IBooksList[] = [];
 
-  count: number = 0;
-  summ: number = 0;
-  typeSort: string = '';
-  isDescending: boolean = true;
+  count = 0;
+  summ = 0;
+  typeSort = '';
+  isDescending = true;
 
   constructor(
     private cartService: CartService,
@@ -29,29 +29,29 @@ export class CartListComponent implements OnInit {
     this.updateData();
   }
 
-  goToOrder() {
+  // ngAfterContentChecked(): void {
+  //   this.updateData();
+  // }
+
+  goToOrder(): void {
     this.router.navigate(['/order']);
   }
 
-  ngAfterContentChecked() {
-    this.updateData();
-  }
-
-  updateList() {
+  updateList(): void {
     this.listBookForCart = this.cartService.getCartProduct();
   }
 
-  updateData() {
+  updateData(): void {
     this.count = this.cartService.getTotalQuantity();
     this.summ = this.cartService.getTotalSum();
   }
 
-  deleteItem(data) {
+  deleteItem(data): void {
     this.cartService.removeBook(data);
     this.updateList();
   }
 
-  deleteAllItem() {
+  deleteAllItem(): void {
     this.cartService.removeAllBook();
     this.booksService.toggleIsShowAll();
     this.updateList();

@@ -10,21 +10,21 @@ import { CartService } from '../../services/cart/cart.service';
 })
 export class OrderComponent {
 
-  message: string = 'Your comment to the order will be displayed here';
+  message = 'Your comment to the order will be displayed here';
 
   constructor(private cartService: CartService, private router: Router) {}
 
-  updateUserMessage(event) {
+  updateUserMessage(event): void {
     const messageUser = event.target.value;
     this.message = messageUser;
   }
 
-  completeOrder() {
+  completeOrder(): void {
     console.log('the order is formed - something will happen to it');
     this.cartService.removeAllBook();
   }
 
-  goToCart() {
+  goToCart(): void {
     this.router.navigate(['/cart']);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 import { CartService } from './services/cart/cart.service';
 
@@ -8,24 +8,31 @@ import { CartService } from './services/cart/cart.service';
   styleUrls: ['./app.component.css'],
 })
 
-export class AppComponent {
-  prefixNameShop: string = 'the';
-  nameShop: string = 'Book';
-  descriptionNameShop: string = "your bookstore";
-  color: string = '#2C535A';
-
-  countItems: number = 0;
+export class AppComponent implements OnInit {
 
   constructor(private cartService: CartService) {}
+  prefixNameShop: string;
+  nameShop: string;
+  descriptionNameShop = 'your bookstore';
+  color = '#2C535A';
 
-  ngAfterContentChecked() {
+  countItems = 0;
+
+  @ViewChild('appTitle', {static: false})
+  description: ElementRef;
+
+  ngOnInit(): void {
+    this.prefixNameShop = 'the';
+    this.nameShop = 'Book';
+    // this.countItems = this.cartService.getTotalQuantity();
+    // this.description.nativeElement.textContent = this.prefixNameShop + this.nameShop;
+  }
+
+  ngAfterContentChecked(): void {
     this.countItems = this.cartService.getTotalQuantity();
   }
 
-  @ViewChild("appTitle", {static: false})
-  description: ElementRef;
-
-   ngAfterViewInit() {
+   ngAfterViewInit(): void {
      this.description.nativeElement.textContent = this.prefixNameShop + this.nameShop;
    }
 

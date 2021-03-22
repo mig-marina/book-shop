@@ -9,10 +9,10 @@ export class ConstantsService {
     this.ver = ver;
   }
 
-  getData() {
+  getData(): any {
     return {
       app: this.app,
       ver: this.ver
-    }
+    };
   }
 }

@@ -23,16 +23,16 @@ import { BooksService } from '../../services/books/books.service';
 export class BookComponent {
 
   @Input() public itemBook: IBook;
-  @Output() onBuyBook = new EventEmitter();
+  @Output() buyBook = new EventEmitter();
 
   constructor(private booksService: BooksService, private router: Router) {}
 
-  onBuy(itemBook) {
+  onBuy(itemBook): void {
     this.itemBook.isShow = false;
-    this.onBuyBook.emit(itemBook);
+    this.buyBook.emit(itemBook);
   }
 
-  getDataBook(itemBook) {
+  getDataBook(itemBook): void {
     this.router.navigate(['product', this.itemBook.id]);
     this.booksService.setItemBooks(itemBook.id);
   }

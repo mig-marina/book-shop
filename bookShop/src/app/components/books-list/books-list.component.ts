@@ -36,7 +36,7 @@ export class BooksListComponent implements OnInit {
     this.booksService.getBooks().subscribe(data => this.listBooks = data);
   }
 
-  onBuyBook(data) {
+  buyBook(data): void {
     this.cartService.addBook(data);
   }
 

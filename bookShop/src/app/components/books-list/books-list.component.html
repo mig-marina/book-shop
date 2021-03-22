@@ -5,7 +5,7 @@
       <app-book
         *ngFor="let itemBook of listBooks"
         [itemBook]="itemBook"
-        (onBuyBook)="onBuyBook($event)"
+        (buyBook)="buyBook($event)"
         class="wrap"
         >
       </app-book>

@@ -41,7 +41,7 @@ export class BooksService {
     return this.listBooks;
   }
 
-  toggleIsShowAll() {
+  toggleIsShowAll(): IBook[] {
     this.listBooks.filter((item) => item.isShow === false).forEach((item) => item.isShow = true);
     return this.listBooks;
   }

@@ -5,17 +5,17 @@ import { Directive, ElementRef, Renderer2, OnChanges, Input, HostListener } from
 })
 export class AddStyleOnClickDirective {
   @Input('appAddStyleOnClick') color: string;
-  isChange: boolean = false;
-  size: string = '24px';
+  isChange = false;
+  size = '24px';
 
   constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
 
-  @HostListener("click", ['$event']) onMouseEnter(event: MouseEvent) {
+  @HostListener('click', ['$event']) onMouseEnter(event: MouseEvent): void {
     this.isChange = !this.isChange;
-    this.changeStyle(this.isChange ? this.size: null, this.color);
+    this.changeStyle(this.isChange ? this.size : null, this.color);
   }
 
-  changeStyle(size, color) {
+  changeStyle(size, color): void {
     this.renderer2.setStyle(
       this.elementRef.nativeElement,
       'font-size',

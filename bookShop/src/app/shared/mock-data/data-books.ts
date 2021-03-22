@@ -66,4 +66,4 @@ export let books: IBook[] = [
       isAvailable: true,
       isShow: true,
     }
-]
+];

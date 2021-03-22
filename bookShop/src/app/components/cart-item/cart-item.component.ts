@@ -17,15 +17,15 @@ export class CartItemComponent {
 
   constructor(private cartService: CartService, private booksService: BooksService) { }
 
-  increase(itemBook) {
+  increase(itemBook): void {
     this.cartService.increaseQuantity(itemBook);
   }
 
-  decrease(itemBook) {
+  decrease(itemBook): void {
     this.cartService.decreaseQuantity(itemBook);
   }
 
-  delete(itemBook) {
+  delete(itemBook): void {
     this.booksService.toggleIsShow(itemBook.item.id);
     this.deleteItem.emit(itemBook);
   }

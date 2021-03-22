@@ -8,12 +8,12 @@ export class ConfigOptionsService {
 
   constructor() { }
 
-  getData() {
+  getData(): void {
 
   }
 
-  setData() {
+  setData(): void {
 
   }
-  
+
 }
