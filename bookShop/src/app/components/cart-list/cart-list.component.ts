@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { IBooksList } from '../../ibooks-list';
@@ -10,7 +10,7 @@ import { BooksService } from '../../services/books/books.service';
   templateUrl: './cart-list.component.html',
   styleUrls: ['./cart-list.component.css']
 })
-export class CartListComponent implements OnInit {
+export class CartListComponent implements OnInit, AfterContentChecked {
 
   listBookForCart: IBooksList[] = [];
 
@@ -29,9 +29,9 @@ export class CartListComponent implements OnInit {
     this.updateData();
   }
 
-  // ngAfterContentChecked(): void {
-  //   this.updateData();
-  // }
+  ngAfterContentChecked(): void {
+    this.updateData();
+  }
 
   goToOrder(): void {
     this.router.navigate(['/order']);
