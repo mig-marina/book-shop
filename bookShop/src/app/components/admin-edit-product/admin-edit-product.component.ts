@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-admin-edit-product',
-  templateUrl: './admin-edit-product.component.html',
-  styleUrls: ['./admin-edit-product.component.css']
+  templateUrl: './admin-edit-product.component.html'
 })
-export class AdminEditProductComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class AdminEditProductComponent {
 
 }

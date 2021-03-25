@@ -33,12 +33,12 @@
 }
 
 .button-settings:hover {
-    color: #FFFFFF;
-    background-color: #064B73;
+  color: #FFFFFF;
+  background-color: #064B73;
 }
 
 .button-settings:focus {
-    outline: none;
+  outline: none;
 }
 
 .disable .cart-item-title {

@@ -7,8 +7,27 @@
     <li><a routerLink="/products-list" routerLinkActive = "active">Catalog</a></li>
   </ul>
   <ul class="cart-menu">
-    <li><a routerLink="/cart" routerLinkActive = "active"><i class="material-icons">shopping_cart</i></a><span class="count-items-to-cart" [ngClass]="{colorEmpty: countItems === 0}">{{countItems}}</span></li>
-    <li><a routerLink="/admin" routerLinkActive = "active"><i class="material-icons">person</i></a></li>
+    <li>
+      <i
+        routerLink="/cart"
+        routerLinkActive = "active"
+        class="material-icons">
+        shopping_cart
+      </i>
+      <span
+        class="count-items-to-cart"
+        [ngClass]="{colorEmpty: countItems === 0}">
+        {{countItems}}
+      </span>
+    </li>
+    <li>
+      <i
+        routerLink="/admin"
+        routerLinkActive = "active"
+        class="material-icons">
+        person
+      </i>
+    </li>
   </ul>
 </nav>
 

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-// import { AuthGuard } from './guards/auth.guard';
-// import { ExitAboutGuard } from './guards/exit-about-guard.guard';
 
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { PageBookComponent } from './components/page-book/page-book.component';
@@ -22,16 +20,7 @@ const routes: Routes = [
   { path: 'order', component: OrderComponent },
   {
     path: 'admin',
-    component: AdminComponent,
-    children: [
-      // { path: '', redirectTo: 'products', pathMatch: 'full'},
-      { path: 'products', component: AdminProductsComponent},
-      { path: 'products/add', component: AdminAddProductComponent},
-      { path: 'products/edit', component: AdminEditProductComponent},
-      { path: 'products/orders', component: AdminOrdersComponent}
-    ]
-    // canActivate: [AuthGuard],
-    // canDeactivate: [ExitAboutGuard]
+    loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule),
   },
   { path: '', redirectTo: '/products-list', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
@@ -40,7 +29,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    // CommonModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]

@@ -1,5 +1,3 @@
-import { IBook } from './../../ibook';
-
 enum Categories {
   Detective = 'Detective',
   History = 'History',
@@ -9,6 +7,8 @@ enum Categories {
   Adventures = 'Adventures',
   Horror = 'Horror'
 }
+
+import { IBook } from './../../ibook';
 
 export let books: IBook[] = [
     {

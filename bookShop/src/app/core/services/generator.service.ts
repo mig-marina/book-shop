@@ -22,7 +22,6 @@ export class GeneratorService {
       return item;
     });
     this.str = this.arraySumbols.join('');
-    console.log(this.str);
     return this.str;
   }
 

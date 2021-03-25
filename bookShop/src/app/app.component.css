@@ -37,6 +37,17 @@ nav a {
   text-transform: uppercase;
 }
 
+nav .cart-menu i {
+  display: block;
+  padding: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+nav .cart-menu i:focus {
+  outline: none;
+}
+
 .cart-menu {
   display: flex;
   justify-content: flex-end;

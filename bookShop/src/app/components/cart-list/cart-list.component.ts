@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterContentChecked } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { IBooksList } from '../../ibooks-list';
 import { CartService } from '../../services/cart/cart.service';
 import { BooksService } from '../../services/books/books.service';
+
+import { IBooksList } from '../../ibooks-list';
 
 @Component({
   selector: 'app-cart-list',

@@ -1,7 +1,7 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { IBook } from './../../ibook';
+import { BooksService } from '../../services/books/books.service';
 
 enum Categories {
   Detective = 'Detective',
@@ -13,7 +13,7 @@ enum Categories {
   Horror = 'Horror'
 }
 
-import { BooksService } from '../../services/books/books.service';
+import { IBook } from './../../ibook';
 
 @Component({
   selector: 'app-book',

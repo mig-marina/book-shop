@@ -9,7 +9,7 @@ export class ConstantsService {
     this.ver = ver;
   }
 
-  getData(): any {
+  getData(): {app: string; ver: string} {
     return {
       app: this.app,
       ver: this.ver

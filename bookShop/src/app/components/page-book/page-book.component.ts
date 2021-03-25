@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IBook } from './../../ibook';
+import { BooksService } from '../../services/books/books.service';
 
 enum Categories {
   Detective = 'Detective',
@@ -12,7 +12,7 @@ enum Categories {
   Horror = 'Horror'
 }
 
-import { BooksService } from '../../services/books/books.service';
+import { IBook } from './../../ibook';
 
 @Component({
   selector: 'app-page-book',

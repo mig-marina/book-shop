@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import { of } from 'rxjs';
 
-import { IBook } from './../../ibook';
-
 enum Categories {
   Detective = 'Detective',
   History = 'History',
@@ -13,6 +11,8 @@ enum Categories {
   Adventures = 'Adventures',
   Horror = 'Horror'
 }
+
+import { IBook } from './../../ibook';
 
 import { books } from '../../shared/mock-data/data-books';
 
