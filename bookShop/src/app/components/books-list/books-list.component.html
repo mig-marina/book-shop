@@ -1,0 +1,13 @@
+<div class="wrap-books-content">
+  <h2>best books for you</h2>
+  <p class="description-wrap-books">You don't need a magic wand to stop time. Take tea and book.</p>
+  <div class="wrap-list">
+      <app-book
+        *ngFor="let itemBook of listBooks"
+        [itemBook]="itemBook"
+        (buyBook)="buyBook($event)"
+        class="wrap"
+        >
+      </app-book>
+  </div>
+</div>

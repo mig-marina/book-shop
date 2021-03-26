@@ -1,0 +1,35 @@
+.wrap-admin {
+  padding: 50px;
+  display: flex;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+}
+
+.left-col {
+  width: 40%;
+}
+
+.right-col {
+  width: 60%;
+}
+
+.admin-menu li {
+  margin-bottom: 10px;
+  width: 150px;
+  border-left: 3px solid #2C535A;
+}
+
+.admin-menu li:hover {
+  border-left-color: #FF0000;
+}
+
+.admin-menu a {
+  display: block;
+  padding: 10px;
+  background-color: #DDDDDD;
+  transition: padding-left .3s;
+}
+
+.admin-menu a:hover {
+  padding-left: 15px;
+}

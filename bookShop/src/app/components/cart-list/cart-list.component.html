@@ -1,0 +1,46 @@
+<div class="cart-content">
+  <div class="wrap-cart-content">
+    <h2>In your cart available for ordering:</h2>
+    <div class="cart-item-header">
+      <div class="cart-item-title">Name Book</div>
+      <div class="cart-item-count">Count</div>
+      <div class="cart-item-price">Price</div>
+      <div class="cart-item-settings">Options</div>
+    </div>
+
+    <div *ngIf="listBookForCart.length !== 0; else emptyCard">
+      <div class="sort-data">
+        <label>Select sorting type: </label>
+        <select [(ngModel)]="typeSort">
+          <option></option>
+          <option value="price">price</option>
+          <option value="count">count</option>
+          <option value="name">name</option>
+        </select>
+        <label>Descending sort: </label>
+        <input type="checkbox" [(ngModel)]="isDescending" checked>
+      </div>
+
+      <app-cart-item
+        *ngFor="let itemBook of listBookForCart | orderBy:typeSort:isDescending"
+        [itemBook]="itemBook"
+        (deleteItem)="deleteItem($event)">
+      </app-cart-item>
+    </div>
+    <ng-template #emptyCard>
+      <p class="empty-card">your cart is empty yet...</p>
+    </ng-template>
+
+    <div *ngIf="listBookForCart.length !== 0">
+      <p class="result">total to pay: <b>{{summ | number:"1.2"}}</b></p>
+      <p class="result-count">total items in the cart: <b>{{count}}</b></p>
+
+      <p class="description">Check the order sheet and click "complete order" to confirm</p>
+      <div class="wrap-button-complete">
+        <button class="button-complete" (click)="goToOrder()">order</button>
+        <button class="button-reset" (click)="deleteAllItem()">reset</button>
+      </div>
+    </div>
+
+  </div>
+</div>

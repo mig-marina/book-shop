@@ -1,0 +1,125 @@
+.cart-content {
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #0B0B5D;
+  border-radius: 20px;
+  user-select: none;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+}
+
+.wrap-cart-content {
+  padding: 50px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.description {
+  padding: 20px 0;
+  border-top: 1px solid #DDDDDD;
+}
+
+.description:before {
+  content: '**';
+  font-size: 20px;
+  padding-right: 10px;
+  color: #8B0000;
+}
+
+.wrap-button-complete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-complete,
+.button-reset {
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  border: 1px solid #064B73;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #064B73;
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.button-complete:hover,
+.button-reset:hover {
+  color: #FFFFFF;
+  background-color: #064B73;
+}
+
+.button-complete:focus,
+.button-reset:focus {
+  outline: none;
+}
+
+.cart-item-header {
+  padding: 20px 0;
+  display: flex;
+}
+
+.cart-item-title {
+  width: 55%;
+  color: #064B73;
+}
+
+.cart-item-count,
+.cart-item-price,
+.cart-item-settings {
+  width: 15%;
+  color: #064B73;
+}
+
+.result {
+  padding: 20px 0;
+  border-top: 1px solid #DDDDDD;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.result b,
+.result-count b {
+  padding-left: 20px;
+  font-weight: bold;
+  color: #8B0000;
+}
+
+.result-count {
+  text-align: right;
+}
+
+.empty-card {
+  padding: 20px;
+  text-align: center;
+  color: #8B0000;
+  text-transform: uppercase;
+}
+
+.sort-data {
+  padding: 10px 0;
+}
+
+.sort-data label {
+  padding: 0 10px;
+  color: #064B73;
+}
+
+.sort-data select {
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 14px;
+  color: #064B73;
+  letter-spacing: 2px;
+}
+
+.sort-data select:focus {
+  outline: none;
+}

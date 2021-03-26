@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap');
+
+header {
+  padding: 10px 50px;
+}
+
+h1 {
+  margin: 5px 0;
+  font-size: 50px;
+  letter-spacing: 3px;
+  color: #2C535A;
+}
+
+header p {
+  color: #2C535A;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  padding: 0 50px;
+  background-color: #282828;
+}
+
+nav ul {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  display: block;
+  padding: 20px;
+  font-family: 'Shippori Mincho B1', serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+nav .cart-menu i {
+  display: block;
+  padding: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+nav .cart-menu i:focus {
+  outline: none;
+}
+
+.cart-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-menu > li {
+  position: relative;
+}
+
+.count-items-to-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+}
+
+.colorEmpty {
+  color: #4a8a95;
+}
+
+footer {
+  padding: 20px 50px;
+  background-color: #2C535A;
+  color: #FFFFFF;
+}
+
+.example {
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.example label {
+  padding: 0 10px;
+}
+
+.example input {
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.example input:focus {
+  outline: none;
+}
