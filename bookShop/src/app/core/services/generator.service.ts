@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class GeneratorService {
 
-  possible: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  str: string = '';
+  possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  str = '';
   arraySumbols: string[] = [];
   countSumbols: number;
 
@@ -14,7 +14,7 @@ export class GeneratorService {
     this.countSumbols = n;
   }
 
-  getStr() {
+  getStr(): string {
     this.arraySumbols.length = this.countSumbols;
     this.arraySumbols.fill('');
     this.arraySumbols = this.arraySumbols.map((item) => {
@@ -22,7 +22,6 @@ export class GeneratorService {
       return item;
     });
     this.str = this.arraySumbols.join('');
-    console.log(this.str);
     return this.str;
   }
 

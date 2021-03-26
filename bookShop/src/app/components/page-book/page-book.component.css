@@ -1,0 +1,11 @@
+.wrap-book {
+  padding: 50px 100px;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+}
+
+.wrap-book h2,
+.wrap-book h3,
+.wrap-book h4 {
+  text-transform: uppercase;
+}

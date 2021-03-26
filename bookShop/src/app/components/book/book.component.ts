@@ -1,6 +1,7 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { IBook } from './../../ibook';
+import { BooksService } from '../../services/books/books.service';
 
 enum Categories {
   Detective = 'Detective',
@@ -12,6 +13,8 @@ enum Categories {
   Horror = 'Horror'
 }
 
+import { IBook } from './../../ibook';
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -20,11 +23,17 @@ enum Categories {
 export class BookComponent {
 
   @Input() public itemBook: IBook;
-  @Output() onBuyBook = new EventEmitter();
+  @Output() buyBook = new EventEmitter();
 
-  onBuy(itemBook) {
+  constructor(private booksService: BooksService, private router: Router) {}
+
+  onBuy(itemBook): void {
     this.itemBook.isShow = false;
-    this.onBuyBook.emit(itemBook);
+    this.buyBook.emit(itemBook);
   }
 
+  getDataBook(itemBook): void {
+    this.router.navigate(['product', this.itemBook.id]);
+    this.booksService.setItemBooks(itemBook.id);
+  }
 }

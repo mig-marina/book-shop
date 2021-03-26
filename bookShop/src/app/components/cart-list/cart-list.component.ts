@@ -1,55 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { CartService } from '../../services/cart/cart.service';
+import { BooksService } from '../../services/books/books.service';
 
 import { IBooksList } from '../../ibooks-list';
-import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
   styleUrls: ['./cart-list.component.css']
 })
-export class CartListComponent implements OnInit {
+export class CartListComponent implements OnInit, AfterContentChecked {
 
   listBookForCart: IBooksList[] = [];
 
-  count: number = 0;
-  summ: number = 0;
-  message: string = 'Your comment to the order will be displayed here';
-  typeSort: string = '';
-  isDescending: boolean = true;
+  count = 0;
+  summ = 0;
+  typeSort = '';
+  isDescending = true;
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private booksService: BooksService,
+    private router: Router) {}
 
   ngOnInit(): void {
     this.updateList();
     this.updateData();
   }
 
-  ngAfterContentChecked() {
+  ngAfterContentChecked(): void {
     this.updateData();
   }
 
-  updateList() {
+  goToOrder(): void {
+    this.router.navigate(['/order']);
+  }
+
+  updateList(): void {
     this.listBookForCart = this.cartService.getCartProduct();
   }
 
-  updateData() {
+  updateData(): void {
     this.count = this.cartService.getTotalQuantity();
     this.summ = this.cartService.getTotalSum();
   }
 
-  updateUserMessage(event) {
-    const messageUser = event.target.value;
-    this.message = messageUser;
-  }
-
-  deleteItem(data) {
+  deleteItem(data): void {
     this.cartService.removeBook(data);
     this.updateList();
   }
 
-  deleteAllItem() {
+  deleteAllItem(): void {
     this.cartService.removeAllBook();
+    this.booksService.toggleIsShowAll();
     this.updateList();
   }
 

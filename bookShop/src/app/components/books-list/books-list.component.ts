@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IBook } from './../../ibook';
-import { IBooksList } from '../../ibooks-list';
+import { BooksService } from '../../services/books/books.service';
+import { CartService } from '../../services/cart/cart.service';
 
 enum Categories {
   Detective = 'Detective',
@@ -13,8 +13,8 @@ enum Categories {
   Horror = 'Horror'
 }
 
-import { BooksService } from '../../services/books/books.service';
-import { CartService } from '../../services/cart/cart.service';
+import { IBook } from './../../ibook';
+import { IBooksList } from '../../ibooks-list';
 
 @Component({
   selector: 'app-books-list',
@@ -36,7 +36,7 @@ export class BooksListComponent implements OnInit {
     this.booksService.getBooks().subscribe(data => this.listBooks = data);
   }
 
-  onBuyBook(data) {
+  buyBook(data): void {
     this.cartService.addBook(data);
   }
 

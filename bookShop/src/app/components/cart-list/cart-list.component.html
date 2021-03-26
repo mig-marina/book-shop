@@ -31,22 +31,15 @@
       <p class="empty-card">your cart is empty yet...</p>
     </ng-template>
 
-    <p class="result">total to pay: <b>{{summ | number:"1.2"}}</b></p>
-    <p class="result-count">total items in the cart: <b>{{count}}</b></p>
-    <div class="wrap-user-message">
-      <div>
-        <p class="comment-description">You can add a comment to your order:</p>
-        <textarea name="comment" (input)="updateUserMessage($event)"></textarea>
-      </div>
-      <div>
-        <p>{{message}}</p>
-      </div>
-    </div>
+    <div *ngIf="listBookForCart.length !== 0">
+      <p class="result">total to pay: <b>{{summ | number:"1.2"}}</b></p>
+      <p class="result-count">total items in the cart: <b>{{count}}</b></p>
 
-    <p class="description">Check the order sheet and click "complete order" to confirm</p>
-    <div class="wrap-button-complete">
-      <button class="button-complete">complete order</button>
-      <button class="button-reset" (click)="deleteAllItem()">reset</button>
+      <p class="description">Check the order sheet and click "complete order" to confirm</p>
+      <div class="wrap-button-complete">
+        <button class="button-complete" (click)="goToOrder()">order</button>
+        <button class="button-reset" (click)="deleteAllItem()">reset</button>
+      </div>
     </div>
 
   </div>
